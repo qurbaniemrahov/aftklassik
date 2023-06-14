@@ -1,0 +1,25 @@
+RewriteEngine On
+RewriteBase /aftklassik
+
+# /login yolunu /public/sign-in/index.php'ye yönlendir
+RewriteRule ^login$ /aftklassik/public/sign-in/index.php [L]
+RewriteRule ^admin$ /aftklassik/admin/sidebars/index.php [L]
+
+# Tüm istekleri index.php'ye yönlendir
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
