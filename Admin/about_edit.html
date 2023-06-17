@@ -9,8 +9,6 @@
     <!-- App favicon -->
     <link rel="shortcut icon" href="">
 
-   
-
     <!-- third party css -->
     <link href="./adminassets/css/vendor/dataTables.bootstrap4.css" rel="stylesheet" type="text/css"/>
     <link href="./adminassets/css/vendor/responsive.bootstrap4.css" rel="stylesheet" type="text/css"/>
@@ -42,22 +40,22 @@
         <!-- LOGO -->
         <a target="_blank" href="https://proton.az" class="logo text-center logo-light">
                     <span class="logo-lg">
-                        <!-- <img style="width:70%;height: 100%" src="./adminassets/images/logo.jpg"
-                             alt="" height="16"> -->
-                             <h2 style="color: #fff;">AFTKLASSIK</h2>
+                        <img style="width:70%;height:auto;" src="./adminassets/images/proton-logo_white.png"
+                             alt="" height="16">
                     </span>
             <span class="logo-sm">
-                       
+                        <img style="width:100%;height:auto;" src="./adminassets/images/proton-logo_white.png"
+                             alt="" height="16">
                     </span>
         </a>
 
         <!-- LOGO -->
         <a href="index.html" class="logo text-center logo-dark">
-                    <span class="logo-lg" style="color: #fff;">
-                        AFTKLASSIK
+                    <span class="logo-lg">
+                        <img src="assets/images/logo-dark.png" alt="" height="16">
                     </span>
             <span class="logo-sm">
-                        
+                        <img src="assets/images/logo_sm_dark.png" alt="" height="16">
                     </span>
         </a>
 
@@ -68,7 +66,10 @@
 
                 <li class="side-nav-title side-nav-item">İdarə paneli</li>
 
-           
+             
+
+
+             
 
                 <li class="side-nav-item">
                     <a href="./about_list.html" class="side-nav-link">
@@ -76,13 +77,6 @@
                         <span>Haqqımızda</span>
                     </a>
                 </li>
-
-
-                
-
-
-              
-         
             </ul>
             <div class="clearfix"></div>
 
@@ -160,143 +154,144 @@
                     <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item"><a href="./home">Dashboard</a></li>
                         <li class="breadcrumb-item"><a href="./about_list">Haqqımızda</a></li>
-                        <li class="breadcrumb-item active">Add</li>
                     </ol>
                 </div>
-                <h4 class="page-title">Add</h4>
             </div>
         </div>
     </div>
-    
     <!-- end page title -->
 
     <div class="row">
         <div class="col-12">
-
-            
             <div class="card">
                 <div class="card-body">
-
-                    <form action="" method="POST" enctype="multipart/form-data">
-                        <input type="hidden" name="_token" value="wkHKtBHl9dRrNlJC7f1tpo2ljRuLOnA6IkjHKPZf">                        <div class="row">
+                    <form action="./about_update/3" method="POST"
+                          enctype="multipart/form-data">
+                        <input type="hidden" name="_token" value="plbRc40QFgZdy2ZXj91W9TelqhbjwXP9Hfhhac3f">                        <div class="row">
                             <div class="col-xl-6">
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-lg-12">
-                                                    <div class="tab-pane  show active"
-                                                         id="form-select-az">
-                                                         <ul class="nav nav-pills bg-nav-pills nav-justified mb-3">
-                                                            <li class="nav-item">
-                                                                <a href="#home1" data-bs-toggle="tab" aria-expanded="false" class="nav-link rounded-0 active">
-                                                                    <i class="mdi mdi-home-variant d-md-none d-block"></i>
-                                                                    <span class="d-none d-md-block">Az</span>
-                                                                </a>
-                                                            </li>
-                                                            <li class="nav-item">
-                                                                <a href="#profile1" data-bs-toggle="tab" aria-expanded="true" class="nav-link rounded-0">
-                                                                    <i class="mdi mdi-account-circle d-md-none d-block"></i>
-                                                                    <span class="d-none d-md-block">En</span>
-                                                                </a>
-                                                            </li>
-                                                            <li class="nav-item">
-                                                                <a href="#settings1" data-bs-toggle="tab" aria-expanded="false" class="nav-link rounded-0">
-                                                                    <i class="mdi mdi-settings-outline d-md-none d-block"></i>
-                                                                    <span class="d-none d-md-block">Ru</span>
-                                                                </a>
-                                                            </li>
-                                                            </ul>
-                                                        <div class="tab-content">
-                                                        <div class="tab-pane show active  " id="home1">
-                                                    
+                                                <ul class="nav nav-tabs nav-bordered mb-3">
+                                                                                                            <li class="nav-item">
+                                                            <a href="#form-select-az" data-bs-toggle="tab"
+                                                               aria-expanded="false"
+                                                               class="nav-link  active ">
+                                                                Az
+                                                            </a>
+                                                        </li>
+                                                                                                            <li class="nav-item">
+                                                            <a href="#form-select-en" data-bs-toggle="tab"
+                                                               aria-expanded="false"
+                                                               class="nav-link ">
+                                                                En
+                                                            </a>
+                                                        </li>
+                                                                                                            <li class="nav-item">
+                                                            <a href="#form-select-ru" data-bs-toggle="tab"
+                                                               aria-expanded="false"
+                                                               class="nav-link ">
+                                                                Ru
+                                                            </a>
+                                                        </li>
+                                                                                                    </ul> <!-- end nav-->
+                                                <div class="tab-content">
+                                                                                                            <div class="tab-pane   show active "
+                                                             id="form-select-az">
+                                                            
                                                             <div class="mb-3">
-                                                                <label for="text" class="form-label">Text(Az)
-                                                                    </label>
+                                                                <label for="text" class="form-label">Text
+                                                                    (Az)</label>
+                                                                <textarea id="ckeditor0"
+                                                                          name="text[]">&lt;p&gt;Şirkətimiz FutureArt MMC brendi altında qabaqcıl texnologiyadan istifadə edərək tikinti sektorunda 16 illik təcr&amp;uuml;bəsi və kapitalı ilə struktur dizayn və tətbiq texnikalarını təqdim edir. Layihənin başa d&amp;uuml;ş&amp;uuml;lməsi, g&amp;ouml;r&amp;uuml;n&amp;uuml;ş&amp;uuml;, keyfiyyət, vaxt və xərc &amp;uuml;&amp;ccedil;bucağını ən optimal dəyərdə birləşdirərək m&amp;uuml;ştəri quruluşuna uyğun xidmətdə fərqli baxış bucağı ilə fərq yaratmaqdır. Dizayn və inşaat olaraq şirkətimiz bu konsepsiyanı ortaya qoymuşdur və layihə idarə&amp;ccedil;iliyi &amp;ccedil;atışmazlığı, səhv xərc tapma və g&amp;ouml;zlənilən və real performans ara
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</textarea>
+                                                                <script>
+                                                                    CKEDITOR.replace('ckeditor0', {
+                                                                        filebrowserUploadUrl: '/assets/filebrowser/plugin.js'
+                                                                    });
+                                                                </script>
+                                                            </div>
+                                                            <input type="hidden" name="lang[]"
+                                                                   value="az">
+                                                        </div>
+                                                                                                            <div class="tab-pane  "
+                                                             id="form-select-en">
+                                                            
+                                                            <div class="mb-3">
+                                                                <label for="text" class="form-label">Text
+                                                                    (En)</label>
                                                                 <textarea id="ckeditor1"
-                                                                            name="text[]"></textarea>
+                                                                          name="text[]">&lt;p&gt;Our company presents structural design and application techniques with its 16 years of experience and capital in the construction sector using advanced technology under the brand of FutureArt LLC. Understanding, view of the project; is to make a difference with a different point of view in service which is suitable for the customer structure through combining quality, time and cost triangle at the most optimum value. Our company, as design &amp;amp; build, has set forth this concept and it delivers solution to the biggest problem in the construction sector such as shortages of project management, incorrectly cost finding, and differences between anticipated and actual performance. in Turkey with its principled and collective perspective.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</textarea>
                                                                 <script>
                                                                     CKEDITOR.replace('ckeditor1', {
                                                                         filebrowserUploadUrl: '/assets/filebrowser/plugin.js'
                                                                     });
                                                                 </script>
                                                             </div>
-                                                            
-                                                            <input type="hidden" name="lang[]" value="az">
+                                                            <input type="hidden" name="lang[]"
+                                                                   value="en">
                                                         </div>
-                                                        <div class="tab-pane" id="profile1">
-                                                        
+                                                                                                            <div class="tab-pane  "
+                                                             id="form-select-ru">
+                                                            
                                                             <div class="mb-3">
-                                                                <label for="text" class="form-label">Text(En)
-                                                                    </label>
-                                                                <textarea id="ckeditor4"
-                                                                            name="text[]"></textarea>
+                                                                <label for="text" class="form-label">Text
+                                                                    (Ru)</label>
+                                                                <textarea id="ckeditor2"
+                                                                          name="text[]">&lt;p&gt;Наша компания предлагает методы проектирования и применения конструкций с 16-летним опытом и капиталом в строительном секторе с использованием передовых технологий под брендом FutureArt LLC. Понимание проекта, сочетание треугольника внешнего вида, качества, времени и стоимости в наиболее оптимальном соотношении, создание разницы с другой точкой зрения на услугу в соответствии со структурой клиента. Как проектно-строительная компания, наша компания разработала эту концепцию и предлагает решения самых больших проблем в строительном секторе, таких как отсутствие управления проектами, неправильный расчет затрат и различия между ожидаемыми и фактическими показателями.&lt;/p&gt;</textarea>
                                                                 <script>
-                                                                    CKEDITOR.replace('ckeditor4', {
+                                                                    CKEDITOR.replace('ckeditor2', {
                                                                         filebrowserUploadUrl: '/assets/filebrowser/plugin.js'
                                                                     });
                                                                 </script>
                                                             </div>
-
-
-                                                            <input type="hidden" name="lang[]" value="en">
+                                                            <input type="hidden" name="lang[]"
+                                                                   value="ru">
                                                         </div>
-                                                        <div class="tab-pane" id="settings1">
+                                                                                                    </div> <!-- end tab-content-->
 
-                                                            <div class="mb-3">
-                                                                <label for="text" class="form-label">Text(Ru)
-                                                                    </label>
-                                                                <textarea id="ckeditor7"
-                                                                            name="text[]"></textarea>
-                                                                <script>
-                                                                    CKEDITOR.replace('ckeditor7', {
-                                                                        filebrowserUploadUrl: '/assets/filebrowser/plugin.js'
-                                                                    });
-                                                                </script>
-                                                            </div>
-                                                            
-                                                            <input type="hidden" name="lang[]" value="ru">
-                                                        </div>
-                                                        
-                                                    </div>
                                             </div> <!-- end col -->
                                         </div> <!-- end row -->
+
                                     </div> <!-- end card-body-->
                                 </div> <!-- end card -->
                             </div> <!-- end col -->
-                                                                </div>
-
                             <div class="col-xl-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <!-- <div class="col-lg-12">
-                                            </div> -->
-                                            <div class="mb-3">
-                                                            <label for="menu_type" class="form-label">Photo1</label>
-                                                            <input type="file" name="img_1" id="menu_type" class="form-control" required>
-                                            </div>
-
-                                            <div class="mb-3">
-                                                <label for="menu_type" class="form-label">Photo2</label>
-                                                <input type="file" name="img_2" id="menu_type" class="form-control" required>
-                                            </div>
-
-                                           
-                                                        <div class="col-xl-12 d-flex justify-content-end">
-                                                            <button tton type="submit" class="btn btn-primary">Saxla</button>
-                                                        </div>
-                                        </div>
-                                    </div>
+                                <div class="mb-3">
+                                    <label for="img" class="form-label">Foto</label>
+                                                                            <br>
+                                        
+                                             
+                                        <input type="hidden" name="old_img1" value="1678955300WhatsApp Image 2022-12-23 at 12.36.23.jpeg">
+                                                                        <input type="file" name="img_1" id="img" class="form-control">
                                 </div>
+
+                                <div class="mb-3">
+                                    <label for="img" class="form-label">Foto</label>
+                                                                            <br>
+                                       
+                                        <input type="hidden" name="old_img2" value="1678955112WhatsApp Image 2022-12-23 at 12.36.51.jpeg">
+                                                                        <input type="file" name="img_2" id="img" class="form-control">
+                                </div>
+
+                                    
+                            </div>
+                            <div class="col-xl-12 d-flex justify-content-end">
+                                <button type="submit" class="btn btn-primary">Submit</button>
                             </div>
                         </div>
                     </form>
                     <!-- end row -->
+
                 </div> <!-- end card-body -->
             </div> <!-- end card-->
         </div> <!-- end col-->
     </div>
-    <!-- end row-->
+
 
             </div>
             <!-- container -->
@@ -310,7 +305,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <script>document.write(new Date().getFullYear())</script>
-                      
+                
                     </div>
                     <div class="col-md-6">
 
