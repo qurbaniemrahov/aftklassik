@@ -152,16 +152,16 @@
 
     
 <main class="form-signin w-100 m-auto">
-  <form action="islem.php" method="POST">
+  <form action="../../config/validate.php" method="POST">
     <img class="mb-4" src="public/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
     <div class="form-floating">
-      <input type="text" class="form-control" id="floatingInput" placeholder="İstifadəçi adı" name="username">
-      <label for="floatingInput">Email address</label>
+      <input type="text" class="form-control" id="floatingInput" placeholder="İstifadəçi adı" name="username" value="">
+      <label for="floatingInput">User Name</label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Şifrə" name="password">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Şifrə" name="password" value="">
       <label for="floatingPassword">Password</label>
     </div>
 
@@ -170,7 +170,7 @@
         <input type="checkbox" value="remember-me"> Remember me
       </label>
     </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit" value="submit">Sign in</button>
+    <button class="w-100 btn btn-lg btn-primary" type="submit" value="submit" name="login"cvalue="Sign In">Sign in</button>
     <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2023</p>
   </form>
 </main>
