@@ -1,5 +1,6 @@
 <?php
-include_once('connection.php');
+include_once('./connection.php');
+
 
 function test_input($data) {
      
@@ -12,10 +13,21 @@ function test_input($data) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = test_input($_POST["username"]);
     $password = test_input($_POST["password"]);
-    $stmt = $conn->prepare("SELECT * FROM aftlogin  ");
+    $stmt = $conn->prepare("SELECT * FROM aftlogin");
+    $stmt->execute();
+    $users = $stmt->fetchAll();
+
+    foreach($users as $user) {
+        if(($user['username']== $username) && ($user['password']== $password)) {
+            echo "welcome admin page";
+        }else {
+            echo "<script language='javascript'>";
+            echo "alert('WRONG INFORMATION')";
+            echo "</script>";
+            die();
+        }
+    }
 }
 
-
-
-
 ?>
+
