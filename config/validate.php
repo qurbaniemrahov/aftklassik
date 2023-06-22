@@ -12,7 +12,7 @@ function test_input($data) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = test_input($_POST["username"]);
     $password = test_input($_POST["password"]);
-    $stmt = $conn->prepare("SELECT * FROM aftlogin");
+    $stmt = $conn->prepare("SELECT * FROM aftlogin  ");
 }
 
 
