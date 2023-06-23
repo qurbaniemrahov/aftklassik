@@ -16,8 +16,11 @@ if ($stmt->rowCount() == 1) {
     header("Location: http://localhost/aftklassik/Admin/about_create.php"); // Replace admin_panel.php with the actual admin panel page
 } else {
     // Username or password is incorrect, redirect back to the login page
-    alert('yanlis istifadeci adi');
-    header("Location: http://localhost/aftklassik/public/sign-in/index.php"); // Replace login.php with the actual login page
+    echo '<script>
+    alert("İstifadəçi adı və ya şifrə yanlışdır.");
+    window.location.href = "http://localhost/aftklassik/public/sign-in/index.php"; // Replace login.php with the actual login page
+  </script>';
+    // header("Location: http://localhost/aftklassik/public/sign-in/index.php"); // Replace login.php with the actual login page
 }
 
 $conn = null;
