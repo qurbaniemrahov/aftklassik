@@ -1,10 +1,14 @@
 <?php
 include_once('./connection.php');
 
+
+
 $enteredUsername = $_POST['username'];
 $enteredPassword = $_POST['password'];
 
+
 $stmt = $conn->prepare("SELECT * FROM aftlogin WHERE username = :username AND password = :password");
+
 
 $stmt->bindParam(':username', $enteredUsername);
 $stmt->bindParam(':password', $enteredPassword);

@@ -9,8 +9,6 @@
     <!-- App favicon -->
     <link rel="shortcut icon" href="">
 
-   
-
     <!-- third party css -->
     <link href="./adminassets/css/vendor/dataTables.bootstrap4.css" rel="stylesheet" type="text/css"/>
     <link href="./adminassets/css/vendor/responsive.bootstrap4.css" rel="stylesheet" type="text/css"/>
@@ -42,22 +40,22 @@
         <!-- LOGO -->
         <a target="_blank" href="#" class="logo text-center logo-light">
                     <span class="logo-lg">
-                        <!-- <img style="width:70%;height: 100%" src="./adminassets/images/logo.jpg"
-                             alt="" height="16"> -->
-                             <h2 style="color: #fff;">AFTKLASSIK</h2>
+                        <img style="width:70%;height:auto;" src="./adminassets/images/proton-logo_white.png"
+                             alt="" height="16">
                     </span>
             <span class="logo-sm">
-                       
+                        <img style="width:100%;height:auto;" src="./adminassets/images/proton-logo_white.png"
+                             alt="" height="16">
                     </span>
         </a>
 
         <!-- LOGO -->
         <a href="index.html" class="logo text-center logo-dark">
-                    <span class="logo-lg" style="color: #fff;">
-                        AFTKLASSIK
+                    <span class="logo-lg">
+                        <img src="./assets/images/logo-dark.png" alt="" height="16">
                     </span>
             <span class="logo-sm">
-                        
+                        <img src="./assets/images/logo_sm_dark.png" alt="" height="16">
                     </span>
         </a>
 
@@ -68,21 +66,46 @@
 
                 <li class="side-nav-title side-nav-item">İdarə paneli</li>
 
-           
+                <li class="side-nav-item">
+                    <a href="https://futureart.az/home" class="side-nav-link">
+                        <i class="uil-home-alt"></i>
+                        <span> Dashboards </span>
+                    </a>
+                </li>
 
-                <!-- <li class="side-nav-item">
-                    <a href="./about_list.html" class="side-nav-link">
+
+                
+            
+
+                <li class="side-nav-item">
+                    <a href="https://futureart.az/about_list" class="side-nav-link">
                         <i class="fa-solid fa-address-card"></i>
                         <span>Haqqımızda</span>
                     </a>
-                </li> -->
+                </li>
 
+             
+
+
+
+           
 
                 
 
 
-              
+                
+
          
+
+              
+            
+
+                <li class="side-nav-item">
+                    <a href="./users_list" class="side-nav-link">
+                        <i class="uil-user"></i>
+                        <span>İstifadəçilər</span>
+                    </a>
+                </li>
             </ul>
             <div class="clearfix"></div>
 
@@ -105,7 +128,7 @@
 
                     <li class="notification-list">
                         <a class="nav-link end-bar-toggle" href="javascript: void(0);">
-                            <!-- <i class="dripicons-gear noti-icon"></i> -->
+                            <i class="dripicons-gear noti-icon"></i>
                         </a>
                     </li>
 
@@ -114,11 +137,11 @@
                            role="button" aria-haspopup="false"
                            aria-expanded="false">
                                     <span class="account-user-avatar">
-                                        <!-- <img src="./adminassets/images/users/avatar-1.jpg" alt="user-image"
-                                             class="rounded-circle"> -->
+                                        <img src="./adminassets/images/users/avatar-1.jpg" alt="user-image"
+                                             class="rounded-circle">
                                     </span>
                             <span>
-                                        <!-- <span class="account-user-name">Aftklassik</span> -->
+                                        <span class="account-user-name">FutureArt</span>
                                         <span class="account-position">Adminstrator</span>
                                     </span>
                         </a>
@@ -135,7 +158,7 @@
                                 <span>My Account</span>
                             </a>
                             <!-- item-->
-                            <a href="./logout" class="dropdown-item notify-item">
+                            <a href="#" class="dropdown-item notify-item">
                                 <i class="mdi mdi-logout me-1"></i>
                                 <span>Logout</span>
                             </a>
@@ -144,7 +167,7 @@
 
                 </ul>
                 <button class="button-menu-mobile open-left">
-                    <i class="fa-solid fa-bars"></i>
+                    <i class="mdi mdi-menu"></i>
                 </button>
 
             </div>
@@ -158,145 +181,68 @@
             <div class="page-title-box">
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
-                        <li class="breadcrumb-item"><a href="./home">Dashboard</a></li>
-                        <li class="breadcrumb-item"><a href="./about_list">Haqqımızda</a></li>
-                        <li class="breadcrumb-item active">Add</li>
+                        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                        <li class="breadcrumb-item active">İstifadəçilər</li>
                     </ol>
                 </div>
-                <h4 class="page-title">Add</h4>
+                <h4 class="page-title">İstifadəçilər</h4>
             </div>
         </div>
     </div>
-    
     <!-- end page title -->
-
     <div class="row">
         <div class="col-12">
-
-            
-            <div class="card">
+                        <div class="card">
                 <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-centered w-100 dt-responsive nowrap">
+                            <thead class="table-light">
+                            <tr>
+                                <th class="all">#</th>
+                                <th>Ad</th>
+                                <th>Email</th>
+                                <th style="width: 85px;">Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                                            <tr>
+                                    <td>
+                                        <p class="m-0 d-inline-block align-middle font-16">
+                                            1
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p class="m-0 d-inline-block align-middle font-16">
+                                            <a href="#" class="text-body">FutureArt</a>
+                                        </p>
+                                    </td>
 
-                    <form action="" method="POST" enctype="multipart/form-data">
-                        <input type="hidden" name="_token" value="wkHKtBHl9dRrNlJC7f1tpo2ljRuLOnA6IkjHKPZf">                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                    <div class="tab-pane  show active"
-                                                         id="form-select-az">
-                                                         <ul class="nav nav-pills bg-nav-pills nav-justified mb-3">
-                                                            <li class="nav-item">
-                                                                <a href="#home1" data-bs-toggle="tab" aria-expanded="false" class="nav-link rounded-0 active">
-                                                                    <i class="mdi mdi-home-variant d-md-none d-block"></i>
-                                                                    <span class="d-none d-md-block">Az</span>
-                                                                </a>
-                                                            </li>
-                                                            <li class="nav-item">
-                                                                <a href="#profile1" data-bs-toggle="tab" aria-expanded="true" class="nav-link rounded-0">
-                                                                    <i class="mdi mdi-account-circle d-md-none d-block"></i>
-                                                                    <span class="d-none d-md-block">En</span>
-                                                                </a>
-                                                            </li>
-                                                            <li class="nav-item">
-                                                                <a href="#settings1" data-bs-toggle="tab" aria-expanded="false" class="nav-link rounded-0">
-                                                                    <i class="mdi mdi-settings-outline d-md-none d-block"></i>
-                                                                    <span class="d-none d-md-block">Ru</span>
-                                                                </a>
-                                                            </li>
-                                                            </ul>
-                                                        <div class="tab-content">
-                                                        <div class="tab-pane show active  " id="home1">
-                                                    
-                                                            <div class="mb-3">
-                                                                <label for="text" class="form-label">Text(Az)
-                                                                    </label>
-                                                                <textarea id="ckeditor1"
-                                                                            name="text[]"></textarea>
-                                                                <script>
-                                                                    CKEDITOR.replace('ckeditor1', {
-                                                                        filebrowserUploadUrl: '/assets/filebrowser/plugin.js'
-                                                                    });
-                                                                </script>
-                                                            </div>
-                                                            
-                                                            <input type="hidden" name="lang[]" value="az">
-                                                        </div>
-                                                        <div class="tab-pane" id="profile1">
-                                                        
-                                                            <div class="mb-3">
-                                                                <label for="text" class="form-label">Text(En)
-                                                                    </label>
-                                                                <textarea id="ckeditor4"
-                                                                            name="text[]"></textarea>
-                                                                <script>
-                                                                    CKEDITOR.replace('ckeditor4', {
-                                                                        filebrowserUploadUrl: '/assets/filebrowser/plugin.js'
-                                                                    });
-                                                                </script>
-                                                            </div>
+                                    <td>
+                                        <p class="m-0 d-inline-block align-middle font-16">
+                                            <a href="#" class="text-body">info@admin.com</a>
+                                        </p>
+                                    </td>
+
+                                    <td class="table-action">
+                                        <a href="#"
+                                           class="action-icon"> <i
+                                                class="mdi mdi-square-edit-outline"></i></a>
+                                    </td>
+                                </tr>
+                                                        </tbody>
+                        </table>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        
+                    </div>
+                </div> <!-- end card-body-->
 
 
-                                                            <input type="hidden" name="lang[]" value="en">
-                                                        </div>
-                                                        <div class="tab-pane" id="settings1">
-
-                                                            <div class="mb-3">
-                                                                <label for="text" class="form-label">Text(Ru)
-                                                                    </label>
-                                                                <textarea id="ckeditor7"
-                                                                            name="text[]"></textarea>
-                                                                <script>
-                                                                    CKEDITOR.replace('ckeditor7', {
-                                                                        filebrowserUploadUrl: '/assets/filebrowser/plugin.js'
-                                                                    });
-                                                                </script>
-                                                            </div>
-                                                            
-                                                            <input type="hidden" name="lang[]" value="ru">
-                                                        </div>
-                                                        
-                                                    </div>
-                                            </div> <!-- end col -->
-                                        </div> <!-- end row -->
-                                    </div> <!-- end card-body-->
-                                </div> <!-- end card -->
-                            </div> <!-- end col -->
-                                                                </div>
-
-                            <div class="col-xl-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <!-- <div class="col-lg-12">
-                                            </div> -->
-                                            <div class="mb-3">
-                                                            <label for="menu_type" class="form-label">Photo1</label>
-                                                            <input type="file" name="img_1" id="menu_type" class="form-control" required>
-                                            </div>
-
-                                            <div class="mb-3">
-                                                <label for="menu_type" class="form-label">Photo2</label>
-                                                <input type="file" name="img_2" id="menu_type" class="form-control" required>
-                                            </div>
-
-                                           
-                                                        <div class="col-xl-12 d-flex justify-content-end">
-                                                            <button tton type="submit" class="btn btn-primary">Saxla</button>
-                                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                    <!-- end row -->
-                </div> <!-- end card-body -->
             </div> <!-- end card-->
-        </div> <!-- end col-->
+        </div> <!-- end col -->
     </div>
-    <!-- end row-->
+
+
 
             </div>
             <!-- container -->
@@ -310,7 +256,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <script>document.write(new Date().getFullYear())</script>
-                      
+                        © İşinizdəki müsbət zərrəcik - <a href="#"><strong>proton.az</strong></a>
                     </div>
                     <div class="col-md-6">
 
@@ -333,12 +279,12 @@
 <!-- Right Sidebar -->
 <div class="end-bar">
 
-    <!-- <div class="rightbar-title">
+    <div class="rightbar-title">
         <a href="javascript:void(0);" class="end-bar-toggle float-end">
             <i class="dripicons-cross noti-icon"></i>
         </a>
         <h5 class="m-0">Settings</h5>
-    </div> -->
+    </div>
 
     <div class="rightbar-content h-100" data-simplebar>
 
@@ -427,8 +373,8 @@
 
 
 <!-- bundle -->
-<script src="./adminassets/js/vendor.min.js"></script>
-<script src="./adminassets/js/app.min.js"></script>
+<script src="https://futureart.az/adminassets/js/vendor.min.js"></script>
+<script src="https://futureart.az/adminassets/js/app.min.js"></script>
 
 <!-- third party js -->
 <script src="./adminassets/js/vendor/apexcharts.min.js"></script>

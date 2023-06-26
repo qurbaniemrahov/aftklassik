@@ -1,4 +1,8 @@
+<?php 
+echo password_hash('1992',PASSWORD_BCRYPT);
 
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
