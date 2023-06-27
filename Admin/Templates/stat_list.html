@@ -230,10 +230,10 @@
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item"><a href="https://futureart.az/home">Dashboard</a></li>
-                        <li class="breadcrumb-item active">İstifadəçilər</li>
+                        <li class="breadcrumb-item active">Statistika</li>
                     </ol>
                 </div>
-                <h4 class="page-title">İstifadəçilər</h4>
+                <h4 class="page-title">Statistika</h4>
             </div>
         </div>
     </div>
@@ -242,13 +242,20 @@
         <div class="col-12">
                         <div class="card">
                 <div class="card-body">
+                    <div class="row mb-2">
+                        <div class="col-sm-4">
+                            <a href="https://futureart.az/stat_create" class="btn btn-danger mb-2"><i
+                                    class="mdi mdi-plus-circle me-2"></i> Add Statistics</a>
+
+                        </div>
+                    </div>
+
                     <div class="table-responsive">
-                        <table class="table table-centered w-100 dt-responsive nowrap">
+                        <table class="table table-centered w-100 dt-responsive nowrap" id="basic-datatable">
                             <thead class="table-light">
                             <tr>
-                                <th class="all">#</th>
-                                <th>Ad</th>
-                                <th>Email</th>
+                                <th class="all">Başlıq</th>
+                                <th class="all">Say</th>
                                 <th style="width: 85px;">Action</th>
                             </tr>
                             </thead>
@@ -256,36 +263,63 @@
                                                             <tr>
                                     <td>
                                         <p class="m-0 d-inline-block align-middle font-16">
-                                            1
+                                            <a href="#" class="text-body">TƏCRÜBƏ İL</a>
                                         </p>
                                     </td>
                                     <td>
                                         <p class="m-0 d-inline-block align-middle font-16">
-                                            <a href="#" class="text-body">FutureArt</a>
+                                            <a href="#" class="text-body">15</a>
                                         </p>
                                     </td>
-
-                                    <td>
-                                        <p class="m-0 d-inline-block align-middle font-16">
-                                            <a href="#" class="text-body">info@admin.com</a>
-                                        </p>
-                                    </td>
-
                                     <td class="table-action">
-                                        <a href="https://futureart.az/users_edit/1"
-                                           class="action-icon"> <i
+                                        <a href="https://futureart.az/stat_edit/4" class="action-icon"> <i
                                                 class="mdi mdi-square-edit-outline"></i></a>
+                                        <a href="https://futureart.az/stat_delete/4" class="action-icon"> <i
+                                                class="mdi mdi-delete"></i></a>
+                                    </td>
+                                </tr>
+                                                            <tr>
+                                    <td>
+                                        <p class="m-0 d-inline-block align-middle font-16">
+                                            <a href="#" class="text-body">BITƏN İŞLƏR</a>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p class="m-0 d-inline-block align-middle font-16">
+                                            <a href="#" class="text-body">50</a>
+                                        </p>
+                                    </td>
+                                    <td class="table-action">
+                                        <a href="https://futureart.az/stat_edit/5" class="action-icon"> <i
+                                                class="mdi mdi-square-edit-outline"></i></a>
+                                        <a href="https://futureart.az/stat_delete/5" class="action-icon"> <i
+                                                class="mdi mdi-delete"></i></a>
+                                    </td>
+                                </tr>
+                                                            <tr>
+                                    <td>
+                                        <p class="m-0 d-inline-block align-middle font-16">
+                                            <a href="#" class="text-body">DAVAM EDƏN İŞLƏR</a>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p class="m-0 d-inline-block align-middle font-16">
+                                            <a href="#" class="text-body">10</a>
+                                        </p>
+                                    </td>
+                                    <td class="table-action">
+                                        <a href="https://futureart.az/stat_edit/6" class="action-icon"> <i
+                                                class="mdi mdi-square-edit-outline"></i></a>
+                                        <a href="https://futureart.az/stat_delete/6" class="action-icon"> <i
+                                                class="mdi mdi-delete"></i></a>
                                     </td>
                                 </tr>
                                                         </tbody>
                         </table>
-                    </div>
-                    <div class="d-flex justify-content-end">
-                        
+
+
                     </div>
                 </div> <!-- end card-body-->
-
-
             </div> <!-- end card-->
         </div> <!-- end col -->
     </div>

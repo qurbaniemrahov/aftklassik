@@ -230,66 +230,160 @@
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item"><a href="https://futureart.az/home">Dashboard</a></li>
-                        <li class="breadcrumb-item active">İstifadəçilər</li>
+                        <li class="breadcrumb-item"><a href="https://futureart.az/service_list">Müştəri rəyləri</a></li>
+                        <li class="breadcrumb-item active">test</li>
                     </ol>
                 </div>
-                <h4 class="page-title">İstifadəçilər</h4>
+                <h4 class="page-title">test</h4>
             </div>
         </div>
     </div>
     <!-- end page title -->
+
     <div class="row">
         <div class="col-12">
-                        <div class="card">
+            <div class="card">
                 <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-centered w-100 dt-responsive nowrap">
-                            <thead class="table-light">
-                            <tr>
-                                <th class="all">#</th>
-                                <th>Ad</th>
-                                <th>Email</th>
-                                <th style="width: 85px;">Action</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                                                            <tr>
-                                    <td>
-                                        <p class="m-0 d-inline-block align-middle font-16">
-                                            1
-                                        </p>
-                                    </td>
-                                    <td>
-                                        <p class="m-0 d-inline-block align-middle font-16">
-                                            <a href="#" class="text-body">FutureArt</a>
-                                        </p>
-                                    </td>
 
-                                    <td>
-                                        <p class="m-0 d-inline-block align-middle font-16">
-                                            <a href="#" class="text-body">info@admin.com</a>
-                                        </p>
-                                    </td>
+                    <form action="https://futureart.az/comment_update/7" method="POST"
+                          enctype="multipart/form-data">
+                        <input type="hidden" name="_token" value="n3wFwIBQG07HiMrxd4UBfrZmDPB6g1IysFDbnzEJ">                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <ul class="nav nav-tabs nav-bordered mb-3">
+                                                                                                            <li class="nav-item">
+                                                            <a href="#form-select-az" data-bs-toggle="tab"
+                                                               aria-expanded="false"
+                                                               class="nav-link  active ">
+                                                                Az
+                                                            </a>
+                                                        </li>
+                                                                                                            <li class="nav-item">
+                                                            <a href="#form-select-en" data-bs-toggle="tab"
+                                                               aria-expanded="false"
+                                                               class="nav-link ">
+                                                                En
+                                                            </a>
+                                                        </li>
+                                                                                                            <li class="nav-item">
+                                                            <a href="#form-select-ru" data-bs-toggle="tab"
+                                                               aria-expanded="false"
+                                                               class="nav-link ">
+                                                                Ru
+                                                            </a>
+                                                        </li>
+                                                                                                    </ul> <!-- end nav-->
+                                                <div class="tab-content">
+                                                                                                            <div class="tab-pane   show active "
+                                                             id="form-select-az">
+                                                            <div class="mb-3">
+                                                                <label for="title" class="form-label">Başlıq
+                                                                    (Az)</label>
+                                                                <input type="text" id="title" class="form-control"
+                                                                       placeholder="Başlıq" name="title[]"
+                                                                       value="test">
+                                                            </div>
+                                                            
+                                                            <div class="mb-3">
+                                                                <label for="text" class="form-label">Text
+                                                                    (Az)</label>
+                                                                <textarea id="ckeditor0"
+                                                                          name="text[]">&lt;p&gt;test&lt;/p&gt;</textarea>
+                                                                <script>
+                                                                    CKEDITOR.replace('ckeditor0', {
+                                                                        filebrowserUploadUrl: '/assets/filebrowser/plugin.js'
+                                                                    });
+                                                                </script>
+                                                            </div>
+                                                            <input type="hidden" name="lang[]"
+                                                                   value="az">
+                                                        </div>
+                                                                                                            <div class="tab-pane  "
+                                                             id="form-select-en">
+                                                            <div class="mb-3">
+                                                                <label for="title" class="form-label">Başlıq
+                                                                    (En)</label>
+                                                                <input type="text" id="title" class="form-control"
+                                                                       placeholder="Başlıq" name="title[]"
+                                                                       value="">
+                                                            </div>
+                                                            
+                                                            <div class="mb-3">
+                                                                <label for="text" class="form-label">Text
+                                                                    (En)</label>
+                                                                <textarea id="ckeditor1"
+                                                                          name="text[]"></textarea>
+                                                                <script>
+                                                                    CKEDITOR.replace('ckeditor1', {
+                                                                        filebrowserUploadUrl: '/assets/filebrowser/plugin.js'
+                                                                    });
+                                                                </script>
+                                                            </div>
+                                                            <input type="hidden" name="lang[]"
+                                                                   value="en">
+                                                        </div>
+                                                                                                            <div class="tab-pane  "
+                                                             id="form-select-ru">
+                                                            <div class="mb-3">
+                                                                <label for="title" class="form-label">Başlıq
+                                                                    (Ru)</label>
+                                                                <input type="text" id="title" class="form-control"
+                                                                       placeholder="Başlıq" name="title[]"
+                                                                       value="">
+                                                            </div>
+                                                            
+                                                            <div class="mb-3">
+                                                                <label for="text" class="form-label">Text
+                                                                    (Ru)</label>
+                                                                <textarea id="ckeditor2"
+                                                                          name="text[]"></textarea>
+                                                                <script>
+                                                                    CKEDITOR.replace('ckeditor2', {
+                                                                        filebrowserUploadUrl: '/assets/filebrowser/plugin.js'
+                                                                    });
+                                                                </script>
+                                                            </div>
+                                                            <input type="hidden" name="lang[]"
+                                                                   value="ru">
+                                                        </div>
+                                                                                                    </div> <!-- end tab-content-->
 
-                                    <td class="table-action">
-                                        <a href="https://futureart.az/users_edit/1"
-                                           class="action-icon"> <i
-                                                class="mdi mdi-square-edit-outline"></i></a>
-                                    </td>
-                                </tr>
-                                                        </tbody>
-                        </table>
-                    </div>
-                    <div class="d-flex justify-content-end">
-                        
-                    </div>
-                </div> <!-- end card-body-->
+                                            </div> <!-- end col -->
+                                        </div> <!-- end row -->
 
+                                    </div> <!-- end card-body-->
+                                </div> <!-- end card -->
+                            </div> <!-- end col -->
+                            <div class="col-xl-6">
+                                <div class="mb-3">
+                                    <label for="img" class="form-label">Foto</label>
+                                                                            <br>
+                                        <img src="https://futureart.az/public/comment/1687851306KITA0414.jpg" title=""
+                                             class="rounded mb-2" height="48"/>
+                                        <input type="hidden" name="old_img" value="1687851306KITA0414.jpg">
+                                                                        <input type="file" name="img" id="img" class="form-control">
+                                </div>
 
+                                <div class="mb-3">
+                                    <label for="price" class="form-label">Ulduz</label>
+                                    <input type="number" id="star" class="form-control" name="star" value="5">
+                                </div>
+                                    
+                            </div>
+                            <div class="col-xl-12 d-flex justify-content-end">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- end row -->
+
+                </div> <!-- end card-body -->
             </div> <!-- end card-->
-        </div> <!-- end col -->
+        </div> <!-- end col-->
     </div>
-
 
 
             </div>

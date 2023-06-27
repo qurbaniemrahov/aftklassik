@@ -230,10 +230,10 @@
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item"><a href="https://futureart.az/home">Dashboard</a></li>
-                        <li class="breadcrumb-item active">İstifadəçilər</li>
+                        <li class="breadcrumb-item active">Slider</li>
                     </ol>
                 </div>
-                <h4 class="page-title">İstifadəçilər</h4>
+                <h4 class="page-title">Slider</h4>
             </div>
         </div>
     </div>
@@ -242,55 +242,61 @@
         <div class="col-12">
                         <div class="card">
                 <div class="card-body">
+                    <div class="row mb-2">
+                        <div class="col-sm-4">
+                            <a href="https://futureart.az/slider_create" class="btn btn-danger mb-2"><i
+                                    class="mdi mdi-plus-circle me-2"></i> Add </a>
+                        </div>
+                    </div>
                     <div class="table-responsive">
-                        <table class="table table-centered w-100 dt-responsive nowrap">
+                        <table class="table table-centered w-100 dt-responsive nowrap" id="products-datatable">
                             <thead class="table-light">
                             <tr>
-                                <th class="all">#</th>
-                                <th>Ad</th>
-                                <th>Email</th>
+                                <th class="all" style="width: 20px;">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="customCheck1">
+                                        <label class="form-check-label" for="customCheck1">&nbsp;</label>
+                                    </div>
+                                </th>
+                                <th class="all">Photo</th>
+                                <th class="all">Başlıq</th>
                                 <th style="width: 85px;">Action</th>
                             </tr>
                             </thead>
                             <tbody>
                                                             <tr>
                                     <td>
-                                        <p class="m-0 d-inline-block align-middle font-16">
-                                            1
-                                        </p>
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="customCheck2">
+                                            <label class="form-check-label" for="customCheck2">&nbsp;</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <img src="https://futureart.az/public/slider/16767140471.jpg" title=""
+                                             class="rounded me-3" height="48"/>
                                     </td>
                                     <td>
                                         <p class="m-0 d-inline-block align-middle font-16">
-                                            <a href="#" class="text-body">FutureArt</a>
-                                        </p>
-                                    </td>
-
-                                    <td>
-                                        <p class="m-0 d-inline-block align-middle font-16">
-                                            <a href="#" class="text-body">info@admin.com</a>
+                                            <a href="#" class="text-body"></a>
                                         </p>
                                     </td>
 
                                     <td class="table-action">
-                                        <a href="https://futureart.az/users_edit/1"
+                                        <a href="https://futureart.az/slider_edit/2"
                                            class="action-icon"> <i
                                                 class="mdi mdi-square-edit-outline"></i></a>
+                                        <a href="https://futureart.az/slider_delete/2"
+                                           class="action-icon"> <i
+                                                class="mdi mdi-delete"></i></a>
                                     </td>
                                 </tr>
                                                         </tbody>
                         </table>
                     </div>
-                    <div class="d-flex justify-content-end">
-                        
-                    </div>
                 </div> <!-- end card-body-->
-
-
             </div> <!-- end card-->
         </div> <!-- end col -->
     </div>
-
-
 
             </div>
             <!-- container -->
