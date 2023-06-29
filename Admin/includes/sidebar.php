@@ -6,26 +6,26 @@
     <div class="leftside-menu">
 
         <!-- LOGO -->
-        <!-- <a target="_blank" href="#" class="logo text-center logo-light">
+        <a target="_blank" href="#" class="logo text-center logo-light">
                     <span class="logo-lg">
-                        <img style="#"
+                        <img style="width:70%;height:auto;" src="../adminassets/images/proton-logo_white.png"
                              alt="" height="16">
                     </span>
             <span class="logo-sm">
-                        <img style="width:100%;height:auto;" src="#"
+                        <img style="width:100%;height:auto;" src="../adminassets/images/proton-logo_white.png"
                              alt="" height="16">
                     </span>
-        </a> -->
+        </a>
 
         <!-- LOGO -->
-        <!-- <a href="index.html" class="logo text-center logo-dark">
+        <a href="index.html" class="logo text-center logo-dark">
                     <span class="logo-lg">
-                        <img src="#" alt="" height="16">
+                        <img src="assets/images/logo-dark.png" alt="" height="16">
                     </span>
             <span class="logo-sm">
-                        <img src="#" alt="" height="16">
+                        <img src="assets/images/logo_sm_dark.png" alt="" height="16">
                     </span>
-        </a> -->
+        </a>
 
         <div class="h-100" id="leftside-menu-container" data-simplebar>
 
@@ -130,7 +130,3 @@
 
     </div>
     <!-- Left Sidebar End -->
-
-    <!-- ============================================================== -->
-    <!-- Start Page Content here -->
-    <!-- ============================================================== -->
