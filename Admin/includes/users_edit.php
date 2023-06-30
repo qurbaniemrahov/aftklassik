@@ -100,8 +100,8 @@
                                                     <div class="mb-3">
                                                         <label for="email" class="form-label">E-mail</label>
                                                         <input type="text" id="email" class="form-control"
-                                                               placeholder="E-mail" name="email"
-                                                               value="info@admin.com">
+                                                               placeholder="E-mail" name="user_email"
+                                                               value="">
                                                     </div>
                                                 </div>
                                             </div> <!-- end tab-content-->
@@ -120,7 +120,7 @@
                                                                                                       <div class="mb-3">
                                                         <label for="password" class="form-label">Şifrə</label>
                                                         <input type="password" id="password" class="form-control"
-                                                               placeholder="Şifrə" name="password"
+                                                               placeholder="Şifrə" name="user_password"
                                                                value="">
                                                     </div>
                                                 </div>
