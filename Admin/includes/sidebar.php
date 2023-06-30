@@ -117,7 +117,7 @@
                 </li>
 
                 <li class="side-nav-item">
-                    <a href="../users_list.html" class="side-nav-link">
+                    <a href="users.php" class="side-nav-link">
                     <i class="fa-solid fa-user"></i>
                         <span>İstifadəçilər</span>
                     </a>

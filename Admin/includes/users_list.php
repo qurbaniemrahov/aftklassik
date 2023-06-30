@@ -19,12 +19,12 @@
                         <a class="nav-link dropdown-toggle nav-user arrow-none me-0" data-bs-toggle="dropdown" href="#"
                            role="button" aria-haspopup="false"
                            aria-expanded="false">
-                                    <span class="account-user-avatar">
+                                    <!-- <span class="account-user-avatar">
                                         <img src="../adminassets/images/users/avatar-1.jpg" alt="user-image"
                                              class="rounded-circle">
-                                    </span>
+                                    </span> -->
                             <span>
-                                        <span class="account-user-name">FutureArt</span>
+                                        <span class="account-user-name">Aftklassik</span>
                                         <span class="account-position">Adminstrator</span>
                                     </span>
                         </a>
@@ -96,7 +96,7 @@
                                     </td>
                                     <td>
                                         <p class="m-0 d-inline-block align-middle font-16">
-                                            <a href="#" class="text-body">FutureArt</a>
+                                            <a href="#" class="text-body">Aftklassik</a>
                                         </p>
                                     </td>
 
@@ -107,7 +107,7 @@
                                     </td>
 
                                     <td class="table-action">
-                                        <a href="../users_edit/1"
+                                        <a href="../includes/users_edit.php"
                                            class="action-icon"> <i
                                                 class="mdi mdi-square-edit-outline"></i></a>
                                     </td>
