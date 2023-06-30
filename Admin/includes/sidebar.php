@@ -35,7 +35,7 @@
                 <li class="side-nav-title side-nav-item">İdarə paneli</li>
 
                 <li class="side-nav-item">
-                    <a href="../home.html" class="side-nav-link">
+                    <a href="../home.php" class="side-nav-link">
                     <i class="fa-solid fa-house"></i>
                         <span> Dashboards </span>
                     </a>
