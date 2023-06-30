@@ -36,7 +36,7 @@
 
                 <li class="side-nav-item">
                     <a href="../home.html" class="side-nav-link">
-                        <i class="uil-home-alt"></i>
+                    <i class="fa-solid fa-house"></i>
                         <span> Dashboards </span>
                     </a>
                 </li>
@@ -68,7 +68,7 @@
                     <a data-bs-toggle="collapse" href="#haqqimizda" aria-expanded="false" aria-controls="haqqimizda" class="side-nav-link">
                         <i class="fa-solid fa-hands-holding-circle"></i>
                         <span>Layihələrimiz</span>
-                        <span class="menu-arrow"></span>
+                        <!-- <span class="menu-arrow"></span> -->
                     </a>
                     <div class="collapse" id="haqqimizda">
                         <ul class="side-nav-second-level">
@@ -111,14 +111,14 @@
               
                 <li class="side-nav-item">
                     <a href="../admin_settings.html" class="side-nav-link">
-                        <i class="uil-rss"></i>
+                    <i class="fa-solid fa-gear"></i>
                         <span>Tənzimləmələr</span>
                     </a>
                 </li>
 
                 <li class="side-nav-item">
                     <a href="../users_list.html" class="side-nav-link">
-                        <i class="uil-user"></i>
+                    <i class="fa-solid fa-user"></i>
                         <span>İstifadəçilər</span>
                     </a>
                 </li>
