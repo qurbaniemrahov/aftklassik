@@ -21,10 +21,10 @@
                         <a class="nav-link dropdown-toggle nav-user arrow-none me-0" data-bs-toggle="dropdown" href="#"
                            role="button" aria-haspopup="false"
                            aria-expanded="false">
-                                    <span class="account-user-avatar">
+                                    <!-- <span class="account-user-avatar">
                                         <img src="../adminassets/images/users/avatar-1.jpg" alt="user-image"
                                              class="rounded-circle">
-                                    </span>
+                                    </span> -->
                             <span>
                                         <span class="account-user-name">Aftklassik</span>
                                         <span class="account-position">Adminstrator</span>
@@ -82,7 +82,7 @@
             <div class="card">
                 <div class="card-body">
 
-                    <form action="../users_update/1" method="POST"
+                    <form action="../../config/admin_user.php" method="POST"
                           enctype="multipart/form-data">
                         <input type="hidden" name="_token" value="n3wFwIBQG07HiMrxd4UBfrZmDPB6g1IysFDbnzEJ">                        <div class="row">
                             <div class="col-xl-6">

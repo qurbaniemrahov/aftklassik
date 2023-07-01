@@ -1,7 +1,7 @@
 <?php
 session_start(); // Start the session
 
-$conn = "";
+$conn = null;
 
 try {
     $servername = "localhost:3306";
@@ -17,6 +17,7 @@ try {
 }
 catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
+    die();
 }
 
 
