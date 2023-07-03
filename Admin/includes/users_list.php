@@ -1,3 +1,4 @@
+
     <!-- ============================================================== -->
     <!-- Start Page Content here -->
     <!-- ============================================================== -->
@@ -55,7 +56,7 @@
 
             </div>
             <!-- end Topbar -->
-
+            <button>add</button>
             <!-- Start Content-->
             <div class="container-fluid">
                     <!-- start page title -->
@@ -110,6 +111,11 @@
                                         <a href="../includes/users_edit.php"
                                            class="action-icon"> <i
                                                 class="mdi mdi-square-edit-outline"></i></a>
+                                    </td>
+
+                                    <td class="table-action">
+                                        <a href="../includes/users_edit.php"
+                                           class="action-icon"><i class="fa fa-trash" aria-hidden="true"></i></a>
                                     </td>
                                 </tr>
                                                         </tbody>
