@@ -56,7 +56,7 @@
 
             </div>
             <!-- end Topbar -->
-            <button>add</button>
+         
             <!-- Start Content-->
             <div class="container-fluid">
                     <!-- start page title -->
@@ -78,6 +78,12 @@
         <div class="col-12">
                         <div class="card">
                 <div class="card-body">
+                    <div class="col-sm-4">
+                        <a href="../includes/user_create.php" class="btn btn-danger mb-2">
+                        <i class="mdi mdi-plus-circle me-2"></i>
+                        Add
+                        </a>
+                    </div>
                     <div class="table-responsive">
                         <table class="table table-centered w-100 dt-responsive nowrap">
                             <thead class="table-light">

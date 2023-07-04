@@ -93,12 +93,12 @@
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="tab-content">
-                                                    <!-- <div class="mb-3">
+                                                    <div class="mb-3">
                                                         <label for="name" class="form-label">Ad </label>
                                                         <input type="text" id="name" class="form-control"
                                                                placeholder="Ad" name="name"
-                                                               value="FutureArt">
-                                                    </div> -->
+                                                               value="">
+                                                    </div>
                                                     <div class="mb-3">
                                                         <label for="email" class="form-label">E-mail</label>
                                                         <input type="text" id="email" class="form-control"
