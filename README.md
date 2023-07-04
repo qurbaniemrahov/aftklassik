@@ -1,11 +1,6 @@
-"# aftklassic" 
-# aftklassik
-# aftklassik
-# aftklassik
-# aftklassik
-# aft
-# aft
-# aft
-# aft
-# aft
-# aftklassik
+# Istifadə edilən texnologiyalar
+- Html
+- Css
+- Bootstrap
+- Javascript
+- Php
