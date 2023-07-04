@@ -40,12 +40,6 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
 
-   foreach ($result as $row) {
-    echo "User Name: " . $row['user_name'] . "<br>";
-    echo "User Email: " . $row['user_email'] . "<br>";
-    echo "User Password: " . $row['user_password'] . "<br><br>";
-}
-
 
 
 ?>

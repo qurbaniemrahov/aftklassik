@@ -87,7 +87,7 @@
                         </a>
                     </div>
                     <div class="table-responsive">
-                        <table class="table table-centered w-100 dt-responsive nowrap">
+                        <table class="table table-centered w-100 dt-responsive nowrap" method="GET" action="../config/admin_user.php">
                             <thead class="table-light">
                             <tr>
                                 <th class="all">#</th>
@@ -97,21 +97,24 @@
                             </tr>
                             </thead>
                             <tbody>
-                                                            <!-- <tr>
+                            <?php if (isset($result) && !empty($result)) { ?>
+                                <?php foreach ($result as $row) { ?>
+
+                                                             <tr>
                                     <td>
                                         <p class="m-0 d-inline-block align-middle font-16">
-                                            
+                                        <?php echo $row['id']; ?>
                                         </p>
                                     </td>
                                     <td>
                                         <p class="m-0 d-inline-block align-middle font-16">
-                                            <a href="#" class="text-body"></a>
+                                        <?php echo $row['user_name']; ?>
                                         </p>
                                     </td>
 
                                     <td>
                                         <p class="m-0 d-inline-block align-middle font-16">
-                                            <a href="#" class="text-body"></a>
+                                        <?php echo $row['user_email']; ?>
                                         </p>
                                     </td>
 
@@ -125,8 +128,14 @@
                                         <a href="../includes/users_edit.php"
                                            class="action-icon"><i class="fa fa-trash" aria-hidden="true"></i></a>
                                     </td>
-                                </tr> -->
-                             
+                                </tr> 
+        
+                                <?php } ?>
+                                <?php } else { ?>
+            <tr>
+                <td colspan="4">No users found.</td>
+            </tr>
+        <?php } ?>
                                 
                                                         </tbody>
                         </table>
