@@ -2,7 +2,7 @@
 <?php 
 include('connection.php');
 
-
+// insert data to database
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
 $user_name = $_POST['user_name'];
 $user_email = $_POST['user_email'];
@@ -29,10 +29,22 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error creating user: " . $conn->errorInfo()[2];
 }
+// insert data to database
+
+$sql = "SELECT * FROM admin_user";
+$stmt = $conn->query($sql);
+
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
 
 
+
+   foreach ($result as $row) {
+    echo "User Name: " . $row['user_name'] . "<br>";
+    echo "User Email: " . $row['user_email'] . "<br>";
+    echo "User Password: " . $row['user_password'] . "<br><br>";
+}
 
 
 

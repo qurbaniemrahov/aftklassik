@@ -1,4 +1,6 @@
 
+
+
     <!-- ============================================================== -->
     <!-- Start Page Content here -->
     <!-- ============================================================== -->
@@ -95,21 +97,21 @@
                             </tr>
                             </thead>
                             <tbody>
-                                                            <tr>
+                                                            <!-- <tr>
                                     <td>
                                         <p class="m-0 d-inline-block align-middle font-16">
-                                            1
+                                            
                                         </p>
                                     </td>
                                     <td>
                                         <p class="m-0 d-inline-block align-middle font-16">
-                                            <a href="#" class="text-body">Aftklassik</a>
+                                            <a href="#" class="text-body"></a>
                                         </p>
                                     </td>
 
                                     <td>
                                         <p class="m-0 d-inline-block align-middle font-16">
-                                            <a href="#" class="text-body">info@admin.com</a>
+                                            <a href="#" class="text-body"></a>
                                         </p>
                                     </td>
 
@@ -123,7 +125,9 @@
                                         <a href="../includes/users_edit.php"
                                            class="action-icon"><i class="fa fa-trash" aria-hidden="true"></i></a>
                                     </td>
-                                </tr>
+                                </tr> -->
+                             
+                                
                                                         </tbody>
                         </table>
                     </div>
