@@ -96,7 +96,7 @@
                                                     <div class="mb-3">
                                                         <label for="name" class="form-label">Ad </label>
                                                         <input type="text" id="name" class="form-control"
-                                                               placeholder="Ad" name="name"
+                                                               placeholder="Ad" name="user_name"
                                                                value="">
                                                     </div>
                                                     <div class="mb-3">

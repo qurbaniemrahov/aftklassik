@@ -84,7 +84,7 @@
             <div class="card">
                 <div class="card-body">
 
-                    <form action="../../config/admin_user.php" method="POST"
+                    <form action="#" method="POST"
                           enctype="multipart/form-data">
                         <input type="hidden" name="_token" value="n3wFwIBQG07HiMrxd4UBfrZmDPB6g1IysFDbnzEJ">                        <div class="row">
                             <div class="col-xl-6">
@@ -96,7 +96,7 @@
                                                     <div class="mb-3">
                                                         <label for="name" class="form-label">Ad </label>
                                                         <input type="text" id="name" class="form-control"
-                                                               placeholder="Ad" name="name"
+                                                               placeholder="Ad" name="user_name"
                                                                value="">
                                                     </div>
                                                     <div class="mb-3">

@@ -155,12 +155,17 @@
     
 <main class="form-signin w-100 m-auto">
   <form action="config/validate.php" method="POST">
-    <img class="mb-4" src="./public/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+    <!-- <img class="mb-4" src="../../assets/img/aftlogo.jpg" alt="" width="72" height="57"> -->
+    <h2>Aftklassik</h2>
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
     <div class="form-floating">
       <input type="text" class="form-control" id="floatingInput" placeholder="İstifadəçi adı" name="username" value="">
       <label for="floatingInput">User Name</label>
+    </div>
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInput" placeholder="İstifadəçi adı" name="user_email" value="">
+      <label for="floatingInput">User Email</label>
     </div>
     <div class="form-floating">
       <input type="password" class="form-control" id="floatingPassword" placeholder="Şifrə" name="password" value="">
