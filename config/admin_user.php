@@ -2,6 +2,7 @@
 <?php 
 include('connection.php');
 
+
 // insert data to database
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
 $user_name = $_POST['user_name'];
@@ -37,7 +38,8 @@ $stmt = $conn->query($sql);
 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
-
+print_R($result);
+die();
 
 
 

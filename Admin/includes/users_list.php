@@ -1,5 +1,22 @@
 
+<?php 
+include('../../config/connection.php');
+$sql = "INSERT INTO admin_user (user_name, user_email, user_password) VALUES ('$user_name', '$user_email', '$user_password')";
 
+if ($conn->query($sql) === TRUE) {
+    echo "User created successfully";
+} else {
+    echo "Error creating user: " . $conn->errorInfo()[2];
+}
+// insert data to database
+
+$sql = "SELECT * FROM admin_user";
+$stmt = $conn->query($sql);
+
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+?>
 
     <!-- ============================================================== -->
     <!-- Start Page Content here -->
@@ -97,6 +114,7 @@
                             </tr>
                             </thead>
                             <tbody>
+
                             <?php if (isset($result) && !empty($result)) { ?>
                                 <?php foreach ($result as $row) { ?>
 
