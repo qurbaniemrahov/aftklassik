@@ -1,7 +1,7 @@
 
 <?php 
 include('../../config/connection.php');
-$sql = "INSERT INTO admin_user (user_name, user_email, user_password) VALUES ('$user_name', '$user_email', '$user_password')";
+$sql = "INSERT INTO admin_user (id ,user_name, user_email, user_password) VALUES ('$id', '$user_name', '$user_email', '$user_password')";
 
 if ($conn->query($sql) === TRUE) {
     echo "User created successfully";
@@ -17,6 +17,7 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
 ?>
+
 
     <!-- ============================================================== -->
     <!-- Start Page Content here -->
@@ -143,8 +144,8 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                     </td>
 
                                     <td class="table-action">
-                                        <a href="../includes/users_edit.php"
-                                           class="action-icon"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                        <a href=""
+                                           class="action-icon"><i class="fa fa-trash" aria-hidden="true"></i><?php echo $row['id'] ?></a>
                                     </td>
                                 </tr> 
         

@@ -23,7 +23,7 @@ if ($conn->query($sql) === FALSE) {
 
 
 
-$sql = "INSERT INTO admin_user (user_name, user_email, user_password) VALUES ('$user_name', '$user_email', '$user_password')";
+$sql = "INSERT INTO admin_user (id, user_name, user_email, user_password) VALUES ('$id', '$user_name', '$user_email', '$user_password')";
 
 if ($conn->query($sql) === TRUE) {
     echo "User created successfully";
@@ -38,8 +38,10 @@ $stmt = $conn->query($sql);
 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
-print_R($result);
-die();
+
+
+// print_R($result);
+// die();
 
 
 
