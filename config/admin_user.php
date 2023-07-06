@@ -17,9 +17,9 @@ admin_user (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 }
 
 
-if ($conn->query($sql) === FALSE) {
-    echo "Error creating table: " . $conn->errorInfo()[2];
-}
+// if ($conn->query($sql) === FALSE) {
+//     echo "Error creating table: " . $conn->errorInfo()[2];
+// }
 
 
 
@@ -42,6 +42,21 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 // print_R($result);
 // die();
+
+// admin user delete
+if (isset($_POST['user_delete'])) {
+    $user_id = $_POST['user_delete'];
+    $sql = "DELETE FROM admin_user WHERE id='$user_id'";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "User deleted successfully";
+    } else {
+        echo "Error creating user: " . $conn->errorInfo()[2];
+    }
+    
+
+  
+}
 
 
 

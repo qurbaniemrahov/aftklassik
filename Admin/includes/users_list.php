@@ -1,7 +1,7 @@
 
 <?php 
 include('../../config/connection.php');
-$sql = "INSERT INTO admin_user (id ,user_name, user_email, user_password) VALUES ('$id', '$user_name', '$user_email', '$user_password')";
+$sql = "INSERT INTO admin_user (user_name, user_email, user_password) VALUES ('$user_name', '$user_email', '$user_password')";
 
 if ($conn->query($sql) === TRUE) {
     echo "User created successfully";
@@ -142,11 +142,19 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                            class="action-icon"> <i
                                                 class="mdi mdi-square-edit-outline"></i></a>
                                     </td>
-
-                                    <td class="table-action">
+<!-- <form action="../../admin_user.php" method="POST">
+<td class="table-action">
                                         <a href=""
-                                           class="action-icon"><i class="fa fa-trash" aria-hidden="true"></i><?php echo $row['id'] ?></a>
+                                           class="action-icon" name="user_delete" value = ""><i class="fa fa-trash" aria-hidden="true"></i></a>
                                     </td>
+</form> -->
+<td>
+<form action="../../admin_user.php" method = "POST">
+<button type="submit" name="user_delete" value = "<?php=$row['id']; ?>" class="btn btn-danger">Delete</button>
+</form>
+</td>
+
+                                 
                                 </tr> 
         
                                 <?php } ?>
