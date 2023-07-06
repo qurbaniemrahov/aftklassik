@@ -1,21 +1,7 @@
 
 <?php 
 include('../../config/connection.php');
-$sql = "INSERT INTO admin_user (user_name, user_email, user_password) VALUES ('$user_name', '$user_email', '$user_password')";
-
-if ($conn->query($sql) === TRUE) {
-    echo "User created successfully";
-} else {
-    echo "Error creating user: " . $conn->errorInfo()[2];
-}
-// insert data to database
-
-$sql = "SELECT * FROM admin_user";
-$stmt = $conn->query($sql);
-
-$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-
+include('../../config/admin_user.php');
 ?>
 
 
@@ -149,7 +135,7 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                     </td>
 </form> -->
 <td>
-<form action="../../admin_user.php" method = "POST">
+<form action="../../config/admin_user.php" method = "POST">
 <button type="submit" name="user_delete" value = "<?php=$row['id']; ?>" class="btn btn-danger">Delete</button>
 </form>
 </td>
