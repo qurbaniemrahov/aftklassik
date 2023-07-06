@@ -44,19 +44,24 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // die();
 
 // admin user delete
-if (isset($_POST['user_delete'])) {
-    $user_id = $_POST['user_delete'];
-    $sql = "DELETE FROM admin_user WHERE id='$user_id'";
+if(isset($_POST['user_delete']) {
+$user_id = $_POST['user_delete'];
+try {
+$query = "DELETE FROM admin_user WHERE id=:user_id";
+$statement = $conn->prepare($query);
+$data = ([':user_id' => $user_id]);
+$query_execute = $statement->execute($data);
 
-    if ($conn->query($sql) === TRUE) {
-        echo "User deleted successfully";
-    } else {
-        echo "Error creating user: " . $conn->errorInfo()[2];
-    }
-    
-
-  
+if($query_execute) {
+    echo "deleted successufly"
+}else {
+    "dont deleted"
 }
+
+}catch(PDOException $e) {
+    echo $e->getMessage();
+}
+})
 
 
 
