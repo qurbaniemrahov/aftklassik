@@ -67,6 +67,20 @@ if (isset($_POST['user_delete'])) {
     }
 }
 
+//Admin user update
+if($_SERVER['REQUEST_METHOD'] === 'POST' and isset($_GET['user_edit'])) {
+    print_r('edit page');
+}
+
+
+
+
+
+
+
+
+
+
 
 ?>
 

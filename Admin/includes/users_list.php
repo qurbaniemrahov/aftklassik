@@ -125,9 +125,14 @@ include('../controller/admin_user.php');
                                     </td>
 
                                     <td class="table-action">
-                                        <a href="../includes/users_edit.php"
-                                           class="action-icon"> <i
-                                                class="mdi mdi-square-edit-outline"></i></a>
+                                        <a href='users_edit.php?id=<?php echo $row['id']; ?>&action=user_edit'>
+                                        
+                                                edit
+                                            
+                                        
+                                        </a>
+                                  
+                                      
                                     </td>
 <!-- <form action="../../admin_user.php" method="POST">
 <td class="table-action">
