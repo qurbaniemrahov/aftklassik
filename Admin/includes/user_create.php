@@ -135,7 +135,7 @@
                         </div> <!-- end col -->
 
                         <div class="col-xl-12 d-flex justify-content-end">
-                            <button type="submit" class="btn btn-primary">Saxla</button>
+                            <button type="submit" name="user_add" class="btn btn-primary">Saxla</button>
                         </div>
                     </form>
                 </div>

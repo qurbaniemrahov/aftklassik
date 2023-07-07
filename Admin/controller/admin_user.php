@@ -3,7 +3,8 @@
 include('../../config/connection.php');
 
 // Insert data into the database
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' and isset($_POST['user_add'])) {
+   
     if (isset($_POST['user_name'], $_POST['user_email'], $_POST['user_password'])) {
         $user_name = $_POST['user_name'];
         $user_email = $_POST['user_email'];
@@ -44,7 +45,12 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 // Admin user delete
 if (isset($_POST['user_delete'])) {
+
+    
     $user_id = $_POST['user_delete'];
+
+    
+    
     try {
         $query = "DELETE FROM admin_user WHERE id=:user_id";
         $statement = $conn->prepare($query);
@@ -60,5 +66,7 @@ if (isset($_POST['user_delete'])) {
         echo $e->getMessage();
     }
 }
+
+
 ?>
 

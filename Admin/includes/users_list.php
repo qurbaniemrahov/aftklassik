@@ -108,7 +108,7 @@ include('../controller/admin_user.php');
 
                                                              <tr>
                                     <td>
-                                        <p class="m-0 d-inline-block align-middle font-16" name="">
+                                        <p class="m-0 d-inline-block align-middle font-16">
                                         <?php echo $row['id']; ?>
                                         </p>
                                     </td>
@@ -137,7 +137,8 @@ include('../controller/admin_user.php');
 </form> -->
 <td>
 <form action="../controller/admin_user.php" method = "POST">
-<button type="submit" name="user_delete" value = "<?php=$row['id']; ?>" class="btn btn-danger">Delete</button>
+
+<button type="submit" name="user_delete" value = "<?php echo $row['id']; ?>" class="btn btn-danger">Delete</button>
 </form>
 </td>
 
