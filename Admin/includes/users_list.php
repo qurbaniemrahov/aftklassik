@@ -1,7 +1,7 @@
 
 <?php 
 include('../../config/connection.php');
-include('../../config/admin_user.php');
+include('../controller/admin_user.php');
 ?>
 
 
@@ -91,7 +91,7 @@ include('../../config/admin_user.php');
                         </a>
                     </div>
                     <div class="table-responsive">
-                        <table class="table table-centered w-100 dt-responsive nowrap" method="GET" action="../config/admin_user.php">
+                        <table class="table table-centered w-100 dt-responsive nowrap" method="GET" action="../controller/admin_user.php">
                             <thead class="table-light">
                             <tr>
                                 <th class="all">#</th>
@@ -101,7 +101,8 @@ include('../../config/admin_user.php');
                             </tr>
                             </thead>
                             <tbody>
-
+                                <form action="../controller/admin_user.php" method="POST">
+                                    
                             <?php if (isset($result) && !empty($result)) { ?>
                                 <?php foreach ($result as $row) { ?>
 
@@ -135,7 +136,7 @@ include('../../config/admin_user.php');
                                     </td>
 </form> -->
 <td>
-<form action="../../config/admin_user.php" method = "POST">
+<form action="../controller/admin_user.php" method = "POST">
 <button type="submit" name="user_delete" value = "<?php=$row['id']; ?>" class="btn btn-danger">Delete</button>
 </form>
 </td>
@@ -149,6 +150,8 @@ include('../../config/admin_user.php');
                 <td colspan="4">No users found.</td>
             </tr>
         <?php } ?>
+                                </form>
+
                                 
                                                         </tbody>
                         </table>

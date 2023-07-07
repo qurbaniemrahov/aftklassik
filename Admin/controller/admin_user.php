@@ -1,5 +1,6 @@
+
 <?php
-include('connection.php');
+include('../../config/connection.php');
 
 
 // Insert data into the database

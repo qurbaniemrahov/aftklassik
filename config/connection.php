@@ -1,5 +1,6 @@
 <?php
-session_start(); // Start the session
+session_start();
+
 
 $conn = null;
 
