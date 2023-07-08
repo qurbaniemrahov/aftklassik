@@ -68,9 +68,28 @@ if (isset($_POST['user_delete'])) {
 }
 
 //Admin user update
-if($_SERVER['REQUEST_METHOD'] === 'POST' and isset($_GET['user_edit'])) {
-    print_r('edit page');
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['user_edit'])) {
+    if (isset($_POST['user_id'], $_POST['user_name'], $_POST['user_email'], $_POST['user_password'])) {
+        $user_id = $_POST['user_id'];
+        $user_name = $_POST['user_name'];
+        $user_email = $_POST['user_email'];
+        $user_password = password_hash($_POST['user_password'], PASSWORD_DEFAULT);
+
+        $sql = "UPDATE admin_user SET user_name = ?, user_email = ?, user_password = ? WHERE id = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute([$user_name, $user_email, $user_password, $user_id]);
+
+        if ($stmt) {
+            echo "User updated successfully";
+        } else {
+            echo "Error updating user: " . $stmt->errorInfo()[2];
+        }
+    } else {
+        // Handle the case when one or more fields are not set
+        echo "Please fill in all the required fields.";
+    }
 }
+
 
 
 

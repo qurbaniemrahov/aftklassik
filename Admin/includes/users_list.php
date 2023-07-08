@@ -125,9 +125,7 @@ include('../controller/admin_user.php');
                                     </td>
 
                                     <td class="table-action">
-                                      <a href="../includes/users_edit.php">Edit</a>
-                                  
-                                      
+                                      <a name="user_edit" value="<?php echo $row['id']; ?>" class="btn btn-primary" href="../includes/users_edit.php">Edit</a>
                                     </td>
 <!-- <form action="../../admin_user.php" method="POST">
 <td class="table-action">
