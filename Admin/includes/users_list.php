@@ -125,12 +125,7 @@ include('../controller/admin_user.php');
                                     </td>
 
                                     <td class="table-action">
-                                        <a href='users_edit.php?id=<?php echo $row['id']; ?>&action=user_edit'>
-                                        
-                                                edit
-                                            
-                                        
-                                        </a>
+                                      <a href="../includes/users_edit.php">Edit</a>
                                   
                                       
                                     </td>
