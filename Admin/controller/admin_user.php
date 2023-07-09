@@ -156,12 +156,12 @@ if (isset($_POST['user_delete'])) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['user_edit'])) {
     if (isset($_POST['user_id'], $_POST['user_name'], $_POST['user_email'], $_POST['user_password'])) {
 
-        $user_id = $_POST['user_id'];
-        $user_name = $_POST['user_name'];
-        $user_email = $_POST['user_email'];
-        $user_password = password_hash($_POST['user_password'], PASSWORD_DEFAULT);
+        $user_id = $_GET['user_id'];
+        $user_name = $_GET['user_name'];
+        $user_email = $_GET['user_email'];
+        $user_password = password_hash($_GET['user_password'], PASSWORD_DEFAULT);
 
-        $sql = "UPDATE admin_user SET user_name = ?, user_email = ?, user_password = ? WHERE id = ?";
+        $sql = "UPDATE admin_user SET user_name = ?, user_email = ?, user_password = ? WHERE id = id=:user_id";
         $stmt = $conn->prepare($sql);
         $stmt->execute([$user_name, $user_email, $user_password, $user_id]);
 
@@ -174,6 +174,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['user_edit'])) {
         // Handle the case when one or more fields are not set
         echo "Please fill in all the required fields.";
     }
+    
 }
 
 
