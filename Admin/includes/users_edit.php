@@ -1,5 +1,7 @@
 <?php include('../includes/header.php'); ?>
 <?php include('../includes/sidebar.php'); ?>
+<?php include('../../config/connection.php'); ?>
+
 
 
     <!-- ============================================================== -->
@@ -86,8 +88,7 @@
 
                     <form action="../controller/admin_user.php" method="POST"
                           enctype="multipart/form-data">
-                          <?php if (isset($result) && !empty($result)) { ?>
-                                <?php foreach ($result as $row) { ?>
+                        
                         <input type="hidden" name="_token" value="n3wFwIBQG07HiMrxd4UBfrZmDPB6g1IysFDbnzEJ">   
                                             <div class="row">
                             <div class="col-xl-6">
@@ -100,13 +101,13 @@
                                                         <label for="name" class="form-label">Ad </label>
                                                         <input type="text" id="name" class="form-control"
                                                                placeholder="Ad" name="user_name"
-                                                               value="<?php echo $row['user_name']; ?>">
+                                                               value="">
                                                     </div>
                                                     <div class="mb-3">
                                                         <label for="email" class="form-label">E-mail</label>
                                                         <input type="text" id="email" class="form-control"
                                                                placeholder="E-mail" name="user_email"
-                                                               value="<?php echo $row['user_email']; ?>">
+                                                               value="">
                                                     </div>
                                                 </div>
                                             </div> <!-- end tab-content-->
@@ -126,7 +127,7 @@
                                                         <label for="password" class="form-label">Şifrə</label>
                                                         <input type="password" id="password" class="form-control"
                                                                placeholder="Şifrə" name="user_password"
-                                                               value="<?php echo $row['user_password']; ?>">
+                                                               value="">
                                                     </div>
                                                 </div>
                                             </div>
@@ -137,14 +138,9 @@
                         </div> <!-- end col -->
 
                         <div class="col-xl-12 d-flex justify-content-end">
-                            <button value = "<?php echo $row['id']; ?>" type="submit" name="user_edit" class="btn btn-primary">Submit</button>
+                            <button value = "" type="submit" name="user_edit" class="btn btn-primary">Submit</button>
                         </div>
-                        <?php } ?>
-                                <?php } else { ?>
-            <tr>
-                <td colspan="4">No users found.</td>
-            </tr>
-        <?php } ?>
+              
                     </form>
                 </div>
                 <!-- end row -->
