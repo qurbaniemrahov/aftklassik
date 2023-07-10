@@ -86,6 +86,8 @@
 
                     <form action="../controller/admin_user.php" method="POST"
                           enctype="multipart/form-data">
+                          <?php if (isset($result) && !empty($result)) { ?>
+                                <?php foreach ($result as $row) { ?>
                         <input type="hidden" name="_token" value="n3wFwIBQG07HiMrxd4UBfrZmDPB6g1IysFDbnzEJ">   
                                             <div class="row">
                             <div class="col-xl-6">
@@ -137,6 +139,12 @@
                         <div class="col-xl-12 d-flex justify-content-end">
                             <button value = "<?php echo $row['id']; ?>" type="submit" name="user_edit" class="btn btn-primary">Submit</button>
                         </div>
+                        <?php } ?>
+                                <?php } else { ?>
+            <tr>
+                <td colspan="4">No users found.</td>
+            </tr>
+        <?php } ?>
                     </form>
                 </div>
                 <!-- end row -->
