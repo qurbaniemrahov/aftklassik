@@ -86,7 +86,8 @@
 
                     <form action="../controller/admin_user.php" method="POST"
                           enctype="multipart/form-data">
-                        <input type="hidden" name="_token" value="n3wFwIBQG07HiMrxd4UBfrZmDPB6g1IysFDbnzEJ">                        <div class="row">
+                        <input type="hidden" name="_token" value="n3wFwIBQG07HiMrxd4UBfrZmDPB6g1IysFDbnzEJ">   
+                        <input type="hidden" name="id" value="<?php  ?>">                      <div class="row">
                             <div class="col-xl-6">
                                 <div class="card">
                                     <div class="card-body">
