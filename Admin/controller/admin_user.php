@@ -63,39 +63,26 @@ if (isset($_POST['user_delete'])) {
 }
 
 // Admin user update
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['user_edit'])) {
-    $user_id = $_POST['user_edit']
-    if (isset($_POST['user_id'], $_POST['user_name'], $_POST['user_email'], $_POST['user_password'])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get the form data
+    $user_id = $_POST['user_edit'];
+    $user_name = $_POST['user_name'];
+    $user_email = $_POST['user_email'];
+    $user_password = $_POST['user_password'];
 
-        
-        $user_name = $_POST['user_name'];
-        $user_email = $_POST['user_email'];
-        $user_password = password_hash($_POST['user_password'], PASSWORD_DEFAULT);
+    try {
+        // Prepare the query to update the user details
+        $stmt = $conn->prepare("UPDATE admin_user SET user_name=:user_name, user_password=:user_password WHERE id=:user_id");
+        $stmt->bindParam(':user_name', $user_name);
+        $stmt->bindParam(':user_password', $user_password);
+        $stmt->bindParam(':user_id', $user_id);
+        $stmt->execute();
 
-        $sql = "UPDATE admin_user SET user_name = ?, user_email = ?, user_password = ? WHERE id = id=:user_id";
-        $stmt = $conn->prepare($sql);
-        $stmt->execute([$user_name, $user_email, $user_password]);
-
-        if ($stmt) {
-            echo "User updated successfully";
-        } else {
-            echo "Error updating user: " . $stmt->errorInfo()[2];
-        }
-    } else {
-        // Handle the case when one or more fields are not set
-        echo "Please fill in all the required fields.";
+        echo "User updated successfully!";
+    } catch(PDOException $e) {
+        echo "Error updating user: " . $e->getMessage();
     }
-    
 }
-
-
-
-
-
-
-
-
-
 
 
 
