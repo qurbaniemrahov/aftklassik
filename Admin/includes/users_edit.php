@@ -98,13 +98,13 @@
                                                         <label for="name" class="form-label">Ad </label>
                                                         <input type="text" id="name" class="form-control"
                                                                placeholder="Ad" name="user_name"
-                                                               value="">
+                                                               value="<?php echo $row['user_name']; ?>">
                                                     </div>
                                                     <div class="mb-3">
                                                         <label for="email" class="form-label">E-mail</label>
                                                         <input type="text" id="email" class="form-control"
                                                                placeholder="E-mail" name="user_email"
-                                                               value="">
+                                                               value="<?php echo $row['user_email']; ?>">
                                                     </div>
                                                 </div>
                                             </div> <!-- end tab-content-->
@@ -124,7 +124,7 @@
                                                         <label for="password" class="form-label">Şifrə</label>
                                                         <input type="password" id="password" class="form-control"
                                                                placeholder="Şifrə" name="user_password"
-                                                               value="">
+                                                               value="<?php echo $row['user_password']; ?>">
                                                     </div>
                                                 </div>
                                             </div>
@@ -135,7 +135,7 @@
                         </div> <!-- end col -->
 
                         <div class="col-xl-12 d-flex justify-content-end">
-                            <button type="submit" name="user_edit" class="btn btn-primary">Submit</button>
+                            <button value = "<?php echo $row['id']; ?>" type="submit" name="user_edit" class="btn btn-primary">Submit</button>
                         </div>
                     </form>
                 </div>
