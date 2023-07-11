@@ -63,43 +63,39 @@ if (isset($_POST['user_delete'])) {
 }
 
 // Admin user update
-if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['user_edit'])) {
-    
-        // Get the submitted form data
-        $user_name = $_POST['user_name'];
-        $user_email = $_POST['user_email'];
-        $user_password = $_POST['user_password'];
-        $user_id = $_POST['user_edit'];
-    
-        try {
-            // Prepare the SQL statement
-            $sql = "UPDATE admin_user SET user_name = :user_name, user_email = :user_email, user_password = :user_password WHERE id = :user_id";
-            $stmt = $conn->prepare($sql);
-    
-            // Bind the parameters
-            $stmt->bindParam(':name', $user_name);
-            $stmt->bindParam(':email', $user_email);
-            $stmt->bindParam(':password', $user_password);
-            $stmt->bindParam(':id', $user_id);
-    
-            // Execute the statement
-            $stmt->execute();
-    
-            // Check if the update was successful
-            if ($stmt->rowCount() > 0) {
-                // User updated successfully
-                echo "User updated successfully.";
-            } else {
-                // User not found or no changes made
-                echo "User not found or no changes made.";
-            }
-        } catch (PDOException $e) {
-            // Error occurred while updating user
-            echo "Error: " . $e->getMessage();
-        }
-    
-    
+if(isset($_POST['user_edit']))
+{
+    $user_id = $_POST['user_id'];
+    $user_name = $_POST['user_name'];
+    $user_email = $_POST['user_email'];
+    $user_password = password_hash($_POST['user_password'], PASSWORD_DEFAULT);
+
+    try {
+$query = "UPDATE admin_user SET user_name=:user_name, user_email=:user_email, user_password=:user_password WHERE id=:user_id LIMIT 1";
+$statement = $conn->prepare($query);
+
+$data = [
+':user_name' => $user_name,
+':user_email' => $user_email,
+':user_password' => $user_password,
+':user_id' => $user_id
+];
+
+$query_execute = $statement->execute($data);
+
+if ($query_execute)
+{
+print_r("updated");
 }
+else 
+{
+print_r("not updated");
+}
+    }catch (PDOException $e) {
+echo $e->getMessage();
+    }
+}
+
 
 ?>
 

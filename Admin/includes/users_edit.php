@@ -1,8 +1,9 @@
-<?php include('../includes/header.php'); ?>
-<?php include('../includes/sidebar.php'); ?>
-<?php include('../../config/connection.php'); ?>
+<?php
+include('../includes/header.php'); 
+ include('../includes/sidebar.php'); 
+ include('../../config/connection.php'); 
 
-
+?>
 
     <!-- ============================================================== -->
     <!-- Start Page Content here -->
@@ -85,7 +86,23 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
+<?php
+if(isset($_GET['id'])) {
+    $user_id = $_GET['id'];
 
+    $query = "SELECT * FROM admin_user WHERE id=:user_id LIMIT 1";
+    $statement = $conn->prepare($query);
+    $data = [
+        ":user_id" => $user_id
+    ];
+
+    $statement->execute($data);
+
+    $result = $statement->fetch(PDO::FETCH_OBJ);
+}
+
+
+?>
                     <form action="../controller/admin_user.php" method="POST"
                           enctype="multipart/form-data">
                         
@@ -97,17 +114,23 @@
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="tab-content">
+                                                <div class="mb-3">
+                                                        <label for="name" class="form-label">Id</label>
+                                                        <input type="hidden" id="name" class="form-control"
+                                                               placeholder="#" name="user_id"
+                                                               value="<?= $result->id ?>">
+                                                    </div>
                                                     <div class="mb-3">
                                                         <label for="name" class="form-label">Ad </label>
                                                         <input type="text" id="name" class="form-control"
                                                                placeholder="Ad" name="user_name"
-                                                               value="">
+                                                               value="<?= $result->user_name ?>">
                                                     </div>
                                                     <div class="mb-3">
                                                         <label for="email" class="form-label">E-mail</label>
                                                         <input type="text" id="email" class="form-control"
                                                                placeholder="E-mail" name="user_email"
-                                                               value="">
+                                                               value="<?= $result->user_email ?>">
                                                     </div>
                                                 </div>
                                             </div> <!-- end tab-content-->
@@ -127,7 +150,7 @@
                                                         <label for="password" class="form-label">Şifrə</label>
                                                         <input type="password" id="password" class="form-control"
                                                                placeholder="Şifrə" name="user_password"
-                                                               value="">
+                                                               value="<?= $result->user_password ?>">
                                                     </div>
                                                 </div>
                                             </div>
