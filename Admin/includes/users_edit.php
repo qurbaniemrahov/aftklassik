@@ -150,7 +150,7 @@ if(isset($_GET['id'])) {
                                                         <label for="password" class="form-label">Şifrə</label>
                                                         <input type="password" id="password" class="form-control"
                                                                placeholder="Şifrə" name="user_password"
-                                                               value="<?= $result->user_password ?>">
+                                                               value="">
                                                     </div>
                                                 </div>
                                             </div>
