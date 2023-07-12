@@ -9,8 +9,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['user_add'])) {
     if (isset($_POST['user_name'], $_POST['user_email'], $_POST['user_password'])) {
         $user_name = $_POST['user_name'];
         $user_email = $_POST['user_email'];
-        $user_password = password_hash($_POST['user_password'], PASSWORD_DEFAULT);
-        // $user_password = $_POST['user_password'];
+        // $user_password = password_hash($_POST['user_password'], PASSWORD_DEFAULT);
+        $user_password = $_POST['user_password'];
 
         $sql = "CREATE TABLE IF NOT EXISTS admin_user (
             id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -69,8 +69,8 @@ if(isset($_POST['user_edit']))
     $user_id = $_POST['user_id'];
     $user_name = $_POST['user_name'];
     $user_email = $_POST['user_email'];
-    $user_password = password_hash($_POST['user_password'], PASSWORD_DEFAULT);
-    // $user_password = $_POST['user_password'];
+    // $user_password = password_hash($_POST['user_password'], PASSWORD_DEFAULT);
+    $user_password = $_POST['user_password'];
 
     if(empty($user_password)) {
         $user_password = ''; // Set password to empty string

@@ -20,7 +20,7 @@
 
     
 
-<link rel="stylesheet" href="./public/assets/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../public/assets/dist/css/bootstrap.min.css">
 
     <style>
       .bd-placeholder-img {
@@ -98,7 +98,7 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="./public/sign-in/sign-in.css" rel="stylesheet">
+    <link href="../sign-in/sign-in.css" rel="stylesheet">
   </head>
   <body class="text-center">
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -154,21 +154,21 @@
 
     
 <main class="form-signin w-100 m-auto">
-  <form action="config/validate.php" method="POST">
+  <form action="../../Admin/controller/validate.php" method="POST">
     <!-- <img class="mb-4" src="../../assets/img/aftlogo.jpg" alt="" width="72" height="57"> -->
     <h2>Aftklassik</h2>
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
-    <div class="form-floating">
+    <!-- <div class="form-floating">
       <input type="text" class="form-control" id="floatingInput" placeholder="İstifadəçi adı" name="username" value="">
       <label for="floatingInput">User Name</label>
-    </div>
+    </div> -->
     <div class="form-floating">
       <input type="email" class="form-control" id="floatingInput" placeholder="İstifadəçi adı" name="user_email" value="">
       <label for="floatingInput">User Email</label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Şifrə" name="password" value="">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Şifrə" name="user_password" value="">
       <label for="floatingPassword">Password</label>
     </div>
 
