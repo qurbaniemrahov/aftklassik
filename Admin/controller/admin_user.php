@@ -47,14 +47,21 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 if (isset($_POST['user_delete'])) {
     $user_id = $_POST['user_delete'];
 
+ 
+    
+   
+
     try {
         $query = "DELETE FROM admin_user WHERE id=:user_id";
         $statement = $conn->prepare($query);
         $statement->bindParam(':user_id', $user_id, PDO::PARAM_INT);
         $query_execute = $statement->execute();
 
+     
+
         if ($query_execute) {
             echo "Deleted successfully";
+      
         } else {
             echo "Not deleted";
         }

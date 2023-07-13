@@ -135,13 +135,17 @@ include('../controller/admin_user.php');
 </form> -->
 <td>
 <form action="../controller/admin_user.php" method = "POST">
-
-<button type="submit" name="user_delete" value = "<?php echo $row['id']; ?>" class="btn btn-danger">Delete</button>
+ 
+<button onclick="confirmDeleteUser(<?php echo $row['id']; ?>)"   name="user_delete" value = "<?php echo $row['id']; ?>" class="btn btn-danger">Delete</button>
 </form>
 </td>
 
+
+
                                  
                                 </tr> 
+
+                                
         
                                 <?php } ?>
                                 <?php } else { ?>
@@ -177,6 +181,34 @@ include('../controller/admin_user.php');
 
     </div>
 
+    <script>
+    function confirmDeleteUser(userId) {
+        var confirmation = confirm("Are you sure you want to delete this user?");
+
+        if (confirmation) {
+            // Perform the deletion by making an AJAX request to the server
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '../controller/admin_user.php', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    // Handle the response from the server
+                    // You can display a success message or update the table, etc.
+                    console.log(xhr.responseText);
+                }
+            };
+            xhr.send('user_delete=' + userId);
+        }
+    }
+</script>
+
+
+
+
+
+
+
+  
     <!-- ============================================================== -->
     <!-- End Page content -->
     <!-- ============================================================== -->

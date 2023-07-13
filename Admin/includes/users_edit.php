@@ -99,6 +99,8 @@ if(isset($_GET['id'])) {
     $statement->execute($data);
 
     $result = $statement->fetch(PDO::FETCH_OBJ);
+
+
 }
 
 
