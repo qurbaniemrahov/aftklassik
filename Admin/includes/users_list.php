@@ -94,7 +94,7 @@ include('../controller/admin_user.php');
                         <table class="table table-centered w-100 dt-responsive nowrap" method="GET" action="../controller/admin_user.php">
                             <thead class="table-light">
                             <tr>
-                                <th class="all">#</th>
+                                <th style="display:none;" class="all">#</th>
                                 <th>Ad</th>
                                 <th>Email</th>
                                 <th style="width: 85px;">Action</th>
@@ -107,8 +107,8 @@ include('../controller/admin_user.php');
                                 <?php foreach ($result as $row) { ?>
 
                                                              <tr>
-                                    <td>
-                                        <p class="m-0 d-inline-block align-middle font-16">
+                                    <td style="display: none;">
+                                        <p  class="m-0 d-inline-block align-middle font-16">
                                         <?php echo $row['id']; ?>
                                         </p>
                                     </td>
@@ -136,7 +136,7 @@ include('../controller/admin_user.php');
 <td>
 <form action="../controller/admin_user.php" method = "POST">
  
-<button onclick="confirmDeleteUser(<?php echo $row['id']; ?>)"   name="user_delete" value = "<?php echo $row['id']; ?>" class="btn btn-danger">Delete</button>
+<button onclick="confirmDeleteUser(<?php echo $row['id']; ?>)"   name="user_delete" value = "" class="btn btn-danger">Delete</button>
 </form>
 </td>
 
