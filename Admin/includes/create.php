@@ -231,10 +231,10 @@
                     <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item"><a href="../home">Dashboard</a></li>
                         <li class="breadcrumb-item"><a href="../slider_list">Slider</a></li>
-                        <li class="breadcrumb-item active"></li>
+                        <li class="breadcrumb-item active">Add</li>
                     </ol>
                 </div>
-                <h4 class="page-title"></h4>
+                <h4 class="page-title">Add</h4>
             </div>
         </div>
     </div>
@@ -242,139 +242,148 @@
 
     <div class="row">
         <div class="col-12">
-            <div class="card">
-                <div class="card-body">
 
-                    <form action="../slider_update/2" method="POST"
-                          enctype="multipart/form-data">
+                        <div class="card">
+                <div class="card-body">
+                    <form action="../slider_store" method="POST" enctype="multipart/form-data">
                         <input type="hidden" name="_token" value="n3wFwIBQG07HiMrxd4UBfrZmDPB6g1IysFDbnzEJ">                        <div class="row">
                             <div class="col-xl-6">
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-lg-12">
-                                                <ul class="nav nav-tabs nav-bordered mb-3">
-                                                                                                            <li class="nav-item">
-                                                            <a href="#form-select-az" data-bs-toggle="tab"
-                                                               aria-expanded="false"
-                                                               class="nav-link  active ">
-                                                                Az
-                                                            </a>
-                                                        </li>
-                                                                                                            <li class="nav-item">
-                                                            <a href="#form-select-en" data-bs-toggle="tab"
-                                                               aria-expanded="false"
-                                                               class="nav-link ">
-                                                                En
-                                                            </a>
-                                                        </li>
-                                                                                                            <li class="nav-item">
-                                                            <a href="#form-select-ru" data-bs-toggle="tab"
-                                                               aria-expanded="false"
-                                                               class="nav-link ">
-                                                                Ru
-                                                            </a>
-                                                        </li>
-                                                                                                    </ul> <!-- end nav-->
-                                                <div class="tab-content">
-                                                                                                            <div class="tab-pane   show active "
-                                                             id="form-select-az">
+                                                    <div class="tab-pane  show active"
+                                                         id="form-select-az">
+                                                         <ul class="nav nav-pills bg-nav-pills nav-justified mb-3">
+                                                            <li class="nav-item">
+                                                                <a href="#home1" data-bs-toggle="tab" aria-expanded="false" class="nav-link rounded-0 active">
+                                                                    <i class="mdi mdi-home-variant d-md-none d-block"></i>
+                                                                    <span class="d-none d-md-block">Az</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a href="#profile1" data-bs-toggle="tab" aria-expanded="true" class="nav-link rounded-0">
+                                                                    <i class="mdi mdi-account-circle d-md-none d-block"></i>
+                                                                    <span class="d-none d-md-block">En</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a href="#settings1" data-bs-toggle="tab" aria-expanded="false" class="nav-link rounded-0">
+                                                                    <i class="mdi mdi-settings-outline d-md-none d-block"></i>
+                                                                    <span class="d-none d-md-block">Ru</span>
+                                                                </a>
+                                                            </li>
+                                                            </ul>
+                                                        <div class="tab-content">
+                                                        <div class="tab-pane show active  " id="home1">
+
                                                             <div class="mb-3">
-                                                                <label for="title" class="form-label">Başlıq
-                                                                    (Az)</label>
+                                                                <label for="title" class="form-label">Başlıq (Az)
+                                                                </label>
                                                                 <input type="text" id="title" class="form-control"
-                                                                       placeholder="Başlıq" name="title[]"
+                                                                       placeholder="Başlıq" name="title[]" 
                                                                        value="">
                                                             </div>
-                                                            
+
+                                                    
                                                             <div class="mb-3">
-                                                                <label for="text" class="form-label">Text
-                                                                    (Az)</label>
-                                                                <textarea id="ckeditor10"
-                                                                          name="text[]"></textarea>
+                                                                <label for="text" class="form-label">Text(Az)
+                                                                    </label>
+                                                                <textarea id="ckeditor2"
+                                                                            name="text[]"></textarea>
                                                                 <script>
-                                                                    CKEDITOR.replace('ckeditor10', {
+                                                                    CKEDITOR.replace('ckeditor2', {
                                                                         filebrowserUploadUrl: '/assets/filebrowser/plugin.js'
                                                                     });
                                                                 </script>
                                                             </div>
-                                                            <input type="hidden" name="lang[]"
-                                                                   value="az">
+                                                            
+                                                            <input type="hidden" name="lang[]" value="az">
                                                         </div>
-                                                                                                            <div class="tab-pane  "
-                                                             id="form-select-en">
+                                                        <div class="tab-pane" id="profile1">
+                                                        
                                                             <div class="mb-3">
-                                                                <label for="title" class="form-label">Başlıq
-                                                                    (En)</label>
+                                                                <label for="title" class="form-label">Başlıq (En)
+                                                                </label>
                                                                 <input type="text" id="title" class="form-control"
-                                                                       placeholder="Başlıq" name="title[]"
+                                                                       placeholder="Başlıq" name="title[]" 
                                                                        value="">
                                                             </div>
-                                                            
+
                                                             <div class="mb-3">
-                                                                <label for="text" class="form-label">Text
-                                                                    (En)</label>
-                                                                <textarea id="ckeditor11"
-                                                                          name="text[]"></textarea>
+                                                                <label for="text" class="form-label">Text(En)
+                                                                    </label>
+                                                                <textarea id="ckeditor4"
+                                                                        name="text[]"></textarea>
                                                                 <script>
-                                                                    CKEDITOR.replace('ckeditor11', {
+                                                                    CKEDITOR.replace('ckeditor4', {
                                                                         filebrowserUploadUrl: '/assets/filebrowser/plugin.js'
                                                                     });
                                                                 </script>
                                                             </div>
-                                                            <input type="hidden" name="lang[]"
-                                                                   value="en">
+
+                                                            <input type="hidden" name="lang[]" value="en">
                                                         </div>
-                                                                                                            <div class="tab-pane  "
-                                                             id="form-select-ru">
+                                                        <div class="tab-pane" id="settings1">
+
                                                             <div class="mb-3">
-                                                                <label for="title" class="form-label">Başlıq
-                                                                    (Ru)</label>
+                                                                <label for="title" class="form-label">Başlıq (Ru)
+                                                                </label>
                                                                 <input type="text" id="title" class="form-control"
-                                                                       placeholder="Başlıq" name="title[]"
+                                                                       placeholder="Başlıq" name="title[]" 
                                                                        value="">
                                                             </div>
-                                                            
+
                                                             <div class="mb-3">
-                                                                <label for="text" class="form-label">Text
-                                                                    (Ru)</label>
-                                                                <textarea id="ckeditor12"
-                                                                          name="text[]"></textarea>
+                                                                <label for="text" class="form-label">Text(Ru)
+                                                                    </label>
+                                                                <textarea id="ckeditor7"
+                                                                        name="text[]"></textarea>
                                                                 <script>
-                                                                    CKEDITOR.replace('ckeditor12', {
+                                                                    CKEDITOR.replace('ckeditor7', {
                                                                         filebrowserUploadUrl: '/assets/filebrowser/plugin.js'
                                                                     });
                                                                 </script>
                                                             </div>
-                                                            <input type="hidden" name="lang[]"
-                                                                   value="ru">
+                                                            
+                                                            <input type="hidden" name="lang[]" value="ru">
                                                         </div>
-                                                                                                    </div> <!-- end tab-content-->
+                                                        
+                                                    </div>
                                             </div> <!-- end col -->
                                         </div> <!-- end row -->
                                     </div> <!-- end card-body-->
                                 </div> <!-- end card -->
                             </div> <!-- end col -->
+                                                                </div>
                             <div class="col-xl-6">
-                                <div class="mb-3">
-                                    <label for="img" class="form-label">Foto</label>
-                                                                            <br>
-                                        <img src="../public/slider/16767140471.jpg" title=""
-                                             class="rounded mb-2" height="48"/>
-                                        <input type="hidden" name="old_img" value="16767140471.jpg">
-                                                                        <input type="file" name="img" id="img" class="form-control">
-                                </div>
-                                <div class="col-xl-12 d-flex justify-content-end">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <!-- <div class="col-lg-12">
+                                            </div> -->
+                                      
+                                            <div class="mb-3">
+                                                            <label for="menu_type" class="form-label">Photo</label>
+                                                            <input type="file" name="img" id="menu_type" class="form-control" required>
+                                                        </div>
+                                                        <div class="col-xl-12 d-flex justify-content-end">
+                                                            <button tton type="submit" class="btn btn-primary">Saxla</button>
+                                                        </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            
                         </div>
                     </form>
                     <!-- end row -->
+
                 </div> <!-- end card-body -->
             </div> <!-- end card-->
         </div> <!-- end col-->
     </div>
+    <!-- end row-->
 
             </div>
             <!-- container -->

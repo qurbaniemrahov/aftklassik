@@ -44,7 +44,7 @@
 
                 
                 <li class="side-nav-item">
-                    <a href="../slider_list.html" class="side-nav-link">
+                    <a href="../pages/slider.php" class="side-nav-link">
                         <i class="fa-solid fa-image"></i>
                         <span>Slider</span>
                     </a>

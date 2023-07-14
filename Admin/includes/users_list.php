@@ -71,7 +71,7 @@ include('../controller/admin_user.php');
             <div class="page-title-box">
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
-                        <li class="breadcrumb-item"><a href="./home">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="../pages/home.php">Dashboard</a></li>
                         <li class="breadcrumb-item active">İstifadəçilər</li>
                     </ol>
                 </div>
@@ -125,7 +125,8 @@ include('../controller/admin_user.php');
                                     </td>
 
                                     <td class="table-action">
-                                      <a name="user_edit" value="" class="btn btn-primary" href="../includes/users_edit.php?id=<?php echo $row['id']; ?>">Edit</a>
+                                      <a onclick="showSuccessAlert()" name="user_edit" value="" class="btn btn-primary" href="../includes/users_edit.php?id=<?php echo $row['id']; ?>">Edit</a>
+                                
                                     </td>
 <!-- <form action="../../admin_user.php" method="POST">
 <td class="table-action">
@@ -182,6 +183,11 @@ include('../controller/admin_user.php');
     </div>
 
     <script>
+    function showSuccessAlert() {
+        swal("Success!", "New user has been inserted.", "success");
+    }
+
+
     function confirmDeleteUser(userId) {
         var confirmation = confirm("Are you sure you want to delete this user?");
 
@@ -201,6 +207,9 @@ include('../controller/admin_user.php');
         }
     }
 </script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 
 
 
